@@ -1,18 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/"><i class="fa-solid fa-link fa-lg"></i> Runtime Terror </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link <%= (page == 'home') ? 'active' : ''; %>" aria-current="page" href="/home"> Host Tournaments</a>
+          <a class="nav-link <%= (page == 'home') ? 'active' : ''; %>" aria-current="page" href="/home"> Host
+            Tournaments</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <%= (page == 'tournaments/list') ? 'active' : ''; %>" aria-current="page" href="/tournament-list"><i class="fa-solid fa-table-list fa-lg"></i> Tournament List</a>
-        </li> 
+          <a class="nav-link <%= (page == 'tournaments/list') ? 'active' : ''; %>" aria-current="page"
+            href="/tournament-list"><i class="fa-solid fa-table-list fa-lg"></i> Tournament List</a>
+        </li>
 
       </ul>
     </div>
