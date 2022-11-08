@@ -31,3 +31,36 @@ export function ProcessTournamentAddPage(req, res, next){
         res.redirect('/tournament-list');
     })
 }
+
+export function DisplayTournamentEditPage(req, res, next){
+    let id = req.params.id;
+
+    tournamentModel.findById(id, (err, tournament) => {
+        if(err){
+            console.error(err);
+            res.end(err);
+        }
+        res.render('index', {title: 'Edit Tournament', page: 'tournaments/edit', tournament: tournament});
+    })
+}
+
+export function ProcessTournamentEditPage(req, res, next){
+    let id = req.params.id;
+    
+    let newTournament = tournamentModel({
+        _id: req.body.id,
+        name: req.body.name,
+        game: req.body.game,
+        startDate: req.body.startDate,
+        endDate: req.body.endDate,
+        size: req.body.size
+    });
+
+    tournamentModel.updateOne({_id: id}, newTournament, (err, Tournament) => {
+        if (err){
+            console.error(err);
+            res.end(err);
+        };
+        res.redirect('/tournament-list');
+    })
+}
