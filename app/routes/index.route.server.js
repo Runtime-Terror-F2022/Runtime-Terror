@@ -1,6 +1,8 @@
 import { Router } from "express";
 import {
     displayHomePage, 
+    DisplayTournamentAddPage,
+    ProcessTournamentAddPage
     } from "../controllers/index.controller.server.js";
 
 const router = Router();
