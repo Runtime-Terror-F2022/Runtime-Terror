@@ -1,3 +1,4 @@
+import tournamentModel from '../models/tournament.js';
 
 export function displayHomePage(req, res, next) {
     res.render('index', { title: 'Host Tournaments', page: 'home' } );
@@ -20,7 +21,7 @@ export function ProcessTournamentAddPage(req, res, next){
             console.error(err);
             res.end(err);
         };
-        res.redirect('/tournament-home');
+        res.redirect('/tournament-list');
     })
 }
 
