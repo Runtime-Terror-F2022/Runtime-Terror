@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <input type="hidden" name="id" value="<%= tournament._id %>" >
+                <div class="form-group">
+                    <label for="nameTextField">Tournament Title</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Tournament Name"
+                    name="name" 
+                    value="<%= tournament.name %>"
+                    required>
+                </div>
+                <p></p>
+                <div class="form-group">
+                    <label for="gameTextField">Game</label>
+                    <input type="text" class="form-control"
+                    id="gameTextField"
+                    placeholder="Enter the Ga,e"
+                    name="game" 
+                    value="<%= tournament.game %>"
+                    required>
+                </div>
+                <p></p>
+                <div class="form-group">
+                    <label for="startDateField">Start Date</label>
+                    <input type="date" class="form-control"
+                    id="startDateField"
+                    placeholder="Enter the Start Date"
+                    name="startDate" 
+                    value="<%= tournament.startDate %>"
+                    required>
+                </div>
+                <p></p>
+                <div class="form-group">
+                    <label for="endDateField">End Date</label>
+                    <input type="date" class="form-control"
+                    id="endDateField"
+                    placeholder="Enter the End Date"
+                    name="endDate"                     
+                    value="<%= tournament.endDate %>"
+                    required>
+                    </input>
+                </div>
+                <p></p>
+                <div class="form-group">
+                    <label for="sizeInputField">Enter the size of the tournament</label>
+                    <input type="number" class="form-control"
+                    id="sizeInputField"
+                    placeholder="Enter the Size of the Tournament"
+                    name="size" 
+                    value="<%= tournament.size %>"
+                    min="16"
+                    max="32"
+                    step="16"
+                    required>
+                    <small>Only sizes allowed are 16 and 32</small>
+                </div>
+                <p></p>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/tournament-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
