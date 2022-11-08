@@ -64,3 +64,15 @@ export function ProcessTournamentEditPage(req, res, next){
         res.redirect('/tournament-list');
     })
 }
+
+export function ProcessTournamentDelete(req, res, next){
+    let id = req.params.id;
+    
+    tournamentModel.remove({_id: id}, (err) => {
+        if (err){
+            console.error(err);
+            res.end(err);
+        }
+        res.redirect('/tournament-list');
+    })
+}
