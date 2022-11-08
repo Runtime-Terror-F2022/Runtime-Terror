@@ -1,13 +1,13 @@
 {
-  "name": "comp229-f2022-week2",
+  "name": "comp229-f2022-project",
   "version": "0.0.1",
-  "description": "comp229 week2 example",
+  "description": "comp229 group project",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Thiago Castilho",
+  "author": "Group Project",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
