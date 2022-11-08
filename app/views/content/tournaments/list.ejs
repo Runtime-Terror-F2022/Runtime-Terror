@@ -14,9 +14,9 @@
                         <th scope="col">Start Date</th>
                         <th scope="col">End Date</th>
                         <th scope="col">Size</th>
-                        <th scope="col">View</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
+                        <!-- <th scope="col">View</th> -->
+                        <th scope="col" class="text-center">Edit</th>
+                        <th scope="col" class="text-center">Delete</th>
                     </tr>
                 </thead>
                 <tbody id="tournamentList">
@@ -31,11 +31,11 @@
                             <td><%= tournaments[count].size %></td>
                             
 
-                            <td class="text-center col-1">
+                            <!-- <td class="text-center col-1">
                                 <a href=""
                                     class="btn btn-primary btn-sm">
                                     <i class="fas fa-pencil-alt"></i> View</a>
-                            </td>
+                            </td> -->
 
                             <td class="text-center col-1">
                                 <a href="/tournament-edit/<%= tournaments[count]._id %>"
