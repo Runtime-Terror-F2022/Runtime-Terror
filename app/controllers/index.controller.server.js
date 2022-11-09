@@ -1,13 +1,13 @@
 import tournamentModel from '../models/tournament.js';
 
 export function displayHomePage(req, res, next) {
-    res.render('index', { title: 'Host Tournaments', page: 'home' } );
+    res.render('index', { title: 'Host Tournaments', page: 'home' });
 };
-export function DisplayTournamentAddPage(req, res, next){
-    res.render('index', {title: 'Add Tournament', page: 'tournaments/edit', tournament: {}});
+export function DisplayTournamentAddPage(req, res, next) {
+    res.render('index', { title: 'Add Tournament', page: 'tournaments/edit', tournament: {} });
 }
 
-export function ProcessTournamentAddPage(req, res, next){
+export function ProcessTournamentAddPage(req, res, next) {
     let newTournament = tournamentModel({
         name: req.body.name,
         game: req.body.game,
@@ -17,7 +17,7 @@ export function ProcessTournamentAddPage(req, res, next){
     });
 
     tournamentModel.create(newTournament, (err, Tournament) => {
-        if(err){
+        if (err) {
             console.error(err);
             res.end(err);
         };
