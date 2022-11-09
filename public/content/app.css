@@ -1,9 +1,9 @@
 body {
     background: linear-gradient(to bottom,
-            #F2F2F2 40%,
-            white 40%,
-            white 70%,
-            #F2F2F2 60%,
+            #F2F2F2 50%,
+            white 50%,
+            white 80%,
+            #F2F2F2 70%,
             #F2F2F2 100%);
 }
 
@@ -12,20 +12,21 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 150px;
-  }
+}
 
 h1 {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
 p {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 10px;
 }
 
 .button,
 .button2 {
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -37,6 +38,7 @@ p {
 }
 
 .currButton {
+    margin-top: 10px;
     margin-bottom: 100px;
     background-color: black;
     color: white;
@@ -45,11 +47,13 @@ p {
 }
 
 .links {
-    margin-top: 8%;
+    margin-top: 5%;
 }
-.row{
+
+.row {
     margin-bottom: 100px;
 }
-.container{
+
+.container {
     margin-bottom: 100px;
 }
