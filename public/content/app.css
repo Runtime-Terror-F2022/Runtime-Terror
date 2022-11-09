@@ -7,16 +7,21 @@ body {
             #F2F2F2 100%);
 }
 
-
+.centerLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+  }
 
 h1 {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 p {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 100px;
 }
 
 .button,
@@ -32,7 +37,7 @@ p {
 }
 
 .currButton {
-    margin-top: 5%;
+    margin-bottom: 100px;
     background-color: black;
     color: white;
     width: 300px;
