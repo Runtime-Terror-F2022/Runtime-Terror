@@ -17,12 +17,12 @@
                 <p></p>
                 <div class="form-group">
                     <label for="gameTextField">Game</label>
-
-                    <input type="text" class="form-control" id="gameTextField" placeholder="Enter the Game" name="game"
-                        value="<%= tournament.game %>" required>
-
-                    
-
+                    <input type="text" class="form-control" 
+                    id="gameTextField" 
+                    placeholder="Enter the Game" 
+                    name="game"
+                    value="<%= tournament.game %>" 
+                    required>
                 </div>
                 <p></p>
                 <div class="form-group">
@@ -54,24 +54,17 @@
                     name="size" 
                     value="<%= tournament.size %>"
                     min="16"
-                    max="32"
-                    step="16"
+                    max="16"
                     required>
-                    <small>Only sizes allowed are 16 and 32</small>
+                    <small>Only sizes allowed are 16 (for now)</small>
                 </div>
                 <p></p>
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
 
-
                 <a href="/home" class="btn btn-warning">
                     <i class="fas fa-undo"></i> Cancel</a>
-
-                
-
-
             </form>
         </div>
-
     </div>
 </div>

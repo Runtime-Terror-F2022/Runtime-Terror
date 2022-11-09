@@ -76,3 +76,15 @@ export function ProcessTournamentDelete(req, res, next){
         res.redirect('/tournament-list');
     })
 }
+
+export function DisplayBracket(req, res, next){
+    let id = req.params.id;
+
+    tournamentModel.findById(id, (err, tournament) => {
+        if(err){
+            console.error(err);
+            res.end(err);
+        }
+        res.render('index', {title: 'View Bracket', page: 'tournaments/view', tournament: tournament});
+    })
+}
