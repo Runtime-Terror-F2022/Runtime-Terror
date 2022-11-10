@@ -1,5 +1,7 @@
+//importing models
 import tournamentModel from '../models/tournament.js';
 
+//rendering pages for tournaments pages
 export function DisplayTournamentList(req, res, next){
     tournamentModel.find(function(err, tournamentCollection){
         if(err){

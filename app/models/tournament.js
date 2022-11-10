@@ -1,3 +1,4 @@
+//importing mongoose and creating a new tournament schema for tournament details.
 import mongoose, { Schema } from 'mongoose';
 
 const Scheme = mongoose.Schema;

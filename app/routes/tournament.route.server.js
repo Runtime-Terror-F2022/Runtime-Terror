@@ -4,6 +4,7 @@ import { DisplayTournamentList, DisplayTournamentAddPage, ProcessTournamentAddPa
 
 const router = Router();
 
+//routers for displaying tournament pages.
 router.get('/tournament-list', DisplayTournamentList);
 router.get('/tournament-add', DisplayTournamentAddPage);
 router.post('/tournament-add', ProcessTournamentAddPage);
