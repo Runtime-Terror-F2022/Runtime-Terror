@@ -5,10 +5,10 @@ const Scheme = mongoose.Schema;
 
 const tournamentSchema = new Schema({
     name: String,
-    game: String,
+    description: String,
     startDate: String,
     endDate: String,
-    size: Number
+    teams: String
 }, {
     timestamps: true,
     collection: 'tournaments'

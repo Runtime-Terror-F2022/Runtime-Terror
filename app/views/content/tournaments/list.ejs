@@ -13,11 +13,11 @@
                     <tr>
                         <th scope="col" class="text-center">#</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Game</th>
+                        <th scope="col">Description</th>
                         <th scope="col">Start Date</th>
                         <th scope="col">End Date</th>
-                        <th scope="col">Size</th>
-                        <th scope="col">View</th>
+                        <th scope="col">Teams/Participants</th>
+                        <th scope="col" class="text-center">View</th>
                         <th scope="col" class="text-center">Edit</th>
                         <th scope="col" class="text-center">Delete</th>
                     </tr>
@@ -33,7 +33,7 @@
                                 <%= tournaments[count].name %>
                             </td>
                             <td>
-                                <%= tournaments[count].game %>
+                                <%= tournaments[count].description %>
                             </td>
                             <td>
                                 <%= tournaments[count].startDate %>
@@ -42,13 +42,13 @@
                                 <%= tournaments[count].endDate %>
                             </td>
                             <td>
-                                <%= tournaments[count].size %>
+                                <%= tournaments[count].teams %>
                             </td>
 
 
                             <td class="text-center col-1">
                                 <a href="/tournament-view/<%= tournaments[count]._id %>" class="btn btn-dark btn-sm">
-                                    <i class="fas fa-pencil-alt"></i> View</a>
+                                    <i class="fa-solid fa-eye"></i> View</a>
                             </td>
 
                             <td class="text-center col-1">

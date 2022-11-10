@@ -19,10 +19,10 @@ export function DisplayTournamentAddPage(req, res, next){
 export function ProcessTournamentAddPage(req, res, next){
     let newTournament = tournamentModel({
         name: req.body.name,
-        game: req.body.game,
+        description: req.body.description,
         startDate: req.body.startDate,
         endDate: req.body.endDate,
-        size: req.body.size
+        teams: req.body.teams
     });
 
     tournamentModel.create(newTournament, (err, Tournament) => {
@@ -52,10 +52,10 @@ export function ProcessTournamentEditPage(req, res, next){
     let newTournament = tournamentModel({
         _id: req.body.id,
         name: req.body.name,
-        game: req.body.game,
+        description: req.body.description,
         startDate: req.body.startDate,
         endDate: req.body.endDate,
-        size: req.body.size
+        teams: req.body.teams
     });
 
     tournamentModel.updateOne({_id: id}, newTournament, (err, Tournament) => {
