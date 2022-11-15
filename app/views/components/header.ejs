@@ -17,16 +17,15 @@
             href="/tournament-list"><i class="fa-solid fa-table-list fa-lg"></i> Tournament List</a>
         </li>
         <!-- Second Release: Login and log out Buttons linked to Nav bar using bootstrap -->
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/logout"><i class="fa-solid fa-right-from-bracket fa-lg"></i>
-            Logout</a>
-        </li>
-
-
-        <li class="nav-item">
-          <a class="nav-link <%= (page == 'login') ? 'active' : ''; %>" aria-current="page" href="/login"><i
-              class="fa-solid fa-right-to-bracket fa-lg"></i> Login</a>
-
+        <% if(displayName) { %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/logout"><i class="fa-solid fa-right-from-bracket fa-lg"></i> Logout</a>
+          </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link <%= (page == 'login') ? 'active' : ''; %>" aria-current="page" href="/login"><i class="fa-solid fa-right-to-bracket fa-lg"></i> Login</a>
+            </li>
+          <% } %>
       </ul>
     </div>
   </div>
