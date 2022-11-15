@@ -45,6 +45,7 @@ db.on('error', () => console.log("Mongo Connection Error"));
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 app.use(logger('dev'));
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, '/client')));
@@ -59,6 +60,17 @@ app.use(session({
 
 // Auth Step 5 - Setup Flash
 app.use(flash());
+
+// Auth Step 6 - Initialize Passport and Session
+app.use(passport.initialize());
+app.use(passport.session());
+
+// // Auth Step 7 - Implementing the Auth Strategy
+// passport.use(User.createStrategy());
+
+// // Auth Step 8 - Setup Serialization and Deseralization
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
 
 // Use routes
 app.use('/', indexRouter);

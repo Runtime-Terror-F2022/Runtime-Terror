@@ -2,7 +2,9 @@
     <div class="row">
       <div class="offset-md-3 col-md-6 col-sm-12">
             <div class="login" id="contentArea">
-                <h1 >Register</h1>
+            <img src="../content/images/Runtime_Logo_Black.png" width="50" class="centerLogo">  
+              
+            <h1 >Register</h1>
   
               <!-- Message Area -->
               <% if(messages.length > 0) { %>
@@ -12,7 +14,7 @@
                 <% } %>
   
                 <form method="POST" id="registerForm" novalidate>
-                  <p >Create your own account!</p>
+                  <p >Create your own account to host or particpate in tournaments</p>
   
                   <div class="form-group">
                     <div class="row">
@@ -64,9 +66,9 @@
                   </div>
                                                       
                   <div class="text-end mt-2">
-                    <button id="submitButton" type="submit" class="btn btn-primary btn-lg">
+                    <button id="submitButton" type="submit" class="btn btn-dark btn-lg">
                       <i class="fas fa-user-plus"></i> Register</button>
-                    <button id="cancelButton" type="reset" class="btn btn-warning btn-lg">
+                    <button id="cancelButton" type="reset" class="btn btn-danger btn-lg">
                       <i class="fas fa-undo"></i> Cancel</button>
                   </div>
                 </form>
