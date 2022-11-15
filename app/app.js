@@ -17,6 +17,7 @@ import flash from 'connect-flash';
 let localStrategy = passportLocal.Strategy;
 
 // Auth Step 3 - import the user model
+import User from './models/user.js';
 
 //import mongoose module
 import mongoose from 'mongoose';
@@ -65,12 +66,12 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-// // Auth Step 7 - Implementing the Auth Strategy
-// passport.use(User.createStrategy());
+// Auth Step 7 - Implementing the Auth Strategy
+passport.use(User.createStrategy());
 
 // // Auth Step 8 - Setup Serialization and Deseralization
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // Use routes
 app.use('/', indexRouter);
