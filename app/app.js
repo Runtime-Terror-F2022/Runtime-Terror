@@ -8,6 +8,16 @@ import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// Auth Step 1 - import modules
+import passport from 'passport';
+import passportLocal from 'passport-local';
+import flash from 'connect-flash';
+
+// Auth Step 2 - define auth strategy
+let localStrategy = passportLocal.Strategy;
+
+// Auth Step 3 - import the user model
+
 //import mongoose module
 import mongoose from 'mongoose';
 
@@ -17,6 +27,7 @@ import { MongoURI, Secret } from '../config/config.js';
 // Import routes
 import indexRouter from "./routes/index.route.server.js";
 import tournamentRouter from './routes/tournament.route.server.js';
+import authRouter from './routes/auth.route.server.js';
 
 // Instantiate Express
 const app = express();
@@ -38,15 +49,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, '/client')));
 app.use(express.static(path.join(__dirname, '../public')));
-app.unsubscribe(session({
+
+// Auth Step 4 - Setup Express Session
+app.use(session({
     secret: Secret,
     saveUninitialized: false,
     resave: false
 }));
 
+// Auth Step 5 - Setup Flash
+app.use(flash());
+
 // Use routes
 app.use('/', indexRouter);
 app.use('/', tournamentRouter);
+app.use('/', authRouter);
 
 
 export default app;
