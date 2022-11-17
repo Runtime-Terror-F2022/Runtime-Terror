@@ -78,5 +78,4 @@ app.use('/', indexRouter);
 app.use('/', tournamentRouter);
 app.use('/', authRouter);
 
-
 export default app;
