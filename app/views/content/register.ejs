@@ -15,7 +15,21 @@
   
                 <form method="POST" id="registerForm" novalidate>
                   <p >Create your own account to host or particpate in tournaments</p>
-  
+
+                  <div class="form-group">
+                    <div class="row">
+                      <p class="lead"><i class="fas fa-shield"></i> Select Profile Type</p>
+                      <div class="col-md-6">
+                        <input type="radio" name="profileType" id="ownerProfile" value="Owner" required>
+                        <label for="ownerProfile">Tournament Owner</label>
+                      </div> 
+                      <div class="col-md-6">
+                        <input type="radio" name="profileType" id="playerProfile" value="Player" required>
+                        <label for="playerProfile">Player in Tournament</label>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="form-group">
                     <div class="row">
                       <p class="lead"><i class="fas fa-user-shield"></i> Personal Information</p>

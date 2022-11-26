@@ -11,7 +11,7 @@ export function DisplayTournamentList(req, res, next){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Tournament List', page: 'tournaments/list', tournaments: tournamentCollection, displayName: UserDisplayName(req)});
+        res.render('index', {title: 'Tournament List', page: 'tournaments/list', tournaments: tournamentCollection, displayName: UserDisplayName(req), });
     })
 }
 
