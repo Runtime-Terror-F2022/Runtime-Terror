@@ -1,0 +1,66 @@
+<div class="container">
+    <h1>Edit Profile</h1>
+    <% if(displayName) { %>
+    
+        <a href="/profile-add"  role="button"></a>
+    <%  } %>
+    <div class="row">
+        <div class="col">
+                <!--creating a table-->
+            <table class="table table-striped table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col" class="text-center">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Password</th>
+                        <% if(displayName) { %>
+                        <th scope="col" class="text-center">Edit</th>
+                        <%  } %>
+                    </tr>
+                </thead>
+                <tbody id="userList" class="p-3 mb-2 bg-light text-black">
+                    <!-- Repeatable Rows -->
+                    <% for(let count=0; count < profiles.length; count++) { %>
+                        <tr>
+                            <th scope="row" class="text-center">
+                                <%= count + 1 %>
+                            </th>
+                            <td>
+                                <%= profiles[count].firstName %>
+                            </td>
+                            <td>
+                                <%= profiles[count].lastName %>
+                            </td>
+                            <td>
+                                <%= profiles[count].emailAddress %>
+                            </td>
+                            <td>
+                                <%= profiles[count].username %>
+                            </td>
+                            <td>
+                                <%= profiles[count].password %>
+                            </td>
+
+                            <% if(displayName) { %> 
+
+                            
+                        
+                            <td class="text-center col-1">
+                                <a href="/profile-edit/<%= profiles[count]._id %>" class="btn btn-dark btn-sm">
+                                    <i class="fas fa-pencil-alt"></i> Edit</a>
+                            </td> 
+
+                            
+
+
+                            <% } %>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
