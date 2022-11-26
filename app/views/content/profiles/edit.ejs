@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1>
+                Edit Profile
+            </h1>
+
+            <form class="form" method="POST">
+                <input type="hidden" name="id" value="<%= profile._id %>">
+                <div class="form-group">
+                    <label for="nameTextField">First Name </label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your First Name:"
+                        name="firstName" value="<%= profile.firstName %>" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="lnameTextField">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your Last Name: " name="lastName"
+                        value="<%= profile.lastName %>" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="emailTextField">Email</label>
+                    <input type="text" class="form-control" id="emailAddress" placeholder="Enter your Email: " name="emailAddress"
+                        value="<%= profile.emailAddress %>" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="usernameTextField">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your Username: " name="username"
+                        value="<%= profile.username %>" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="passTextField">Password</label>
+                    <input type="text" class="form-control" id="password placeholder="Enter your : " name="password"
+                        value="<%= profile.password %>" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="cpassTextField">Confirm Password</label>
+                    <input type="text" class="form-control" id="confirmPassword" placeholder="Confirm Password: " name="confirmPassword"
+                        value="<%= profile.confirmPassword %>" required>
+                </div>
+                <br>
+                
+                <button class="btn btn-dark" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+
+                <a href="/profile-list" class="btn btn-danger">
+                    <i class="fas fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
