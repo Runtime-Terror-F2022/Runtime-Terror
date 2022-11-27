@@ -2,7 +2,7 @@
 import tournamentModel from '../models/tournament.js';
 
 // import DisplayName Utility method
-import { UserDisplayName } from '../utils/index.js';
+import { UserDisplayName, UserProfileType } from '../utils/index.js';
 
 //rendering pages for tournaments pages
 export function DisplayTournamentList(req, res, next){
@@ -11,7 +11,7 @@ export function DisplayTournamentList(req, res, next){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Tournament List', page: 'tournaments/list', tournaments: tournamentCollection, displayName: UserDisplayName(req), });
+        res.render('index', {title: 'Tournament List', page: 'tournaments/list', tournaments: tournamentCollection, displayName: UserDisplayName(req), profileType: UserProfileType(req) });
     })
 }
 

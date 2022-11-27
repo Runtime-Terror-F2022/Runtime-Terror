@@ -25,10 +25,15 @@
                             
         <!-- trying to put the edit and delete into an if statement that is based on type of profile  -->
                         
-                        <!-- <% if(profileType.value == "Owner") { %>le. 
+                         <% if(profileType == "ownerProfile") { %>le. 
+                        <th scope="col" class="text-center">View</th>
                         <th scope="col" class="text-center">Edit</th>
                         <th scope="col" class="text-center">Delete</th>
-                        <%  } %> -->
+                        <%  } %> 
+
+                        <% if(profileType == "playerProfile") { %>le. 
+                            <th scope="col" class="text-center">View</th>
+                            <%  } %> 
                     </tr>
                 </thead>
                 <tbody id="tournamentList" class="p-3 mb-2 bg-light text-black">

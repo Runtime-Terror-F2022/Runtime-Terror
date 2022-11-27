@@ -8,6 +8,13 @@ export function UserDisplayName(req){
     }
     return '';
 }
+
+export function UserProfileType(req){
+    if(req.user){
+        return req.user.profileType;
+    }
+    return '';
+}
 //exporting authguard function
 export function AuthGuard(req, res, next){
     if(!req.isAuthenticated()){
