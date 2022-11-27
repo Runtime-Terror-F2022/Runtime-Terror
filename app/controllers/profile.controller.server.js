@@ -21,6 +21,7 @@ export function DisplayProfileAddPage(req, res, next){
 
 export function ProcessProfileAddPage(req, res, next){
     let newProfile = profileModel({
+        profileType: req.body.profileType,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         emailAddress: req.body.emailAddress,
@@ -55,6 +56,7 @@ export function ProcessProfileEditPage(req, res, next){
     
     let newProfile = profileModel({
         _id: req.body.id,
+        profileType: req.body.profileType,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         emailAddress: req.body.emailAddress,
