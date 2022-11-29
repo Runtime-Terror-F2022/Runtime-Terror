@@ -7,9 +7,12 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
     profileType: String,
-    displayName: String,
+    firstName: String,
+    lastName: String,
+    emailAddress: String,
     username: String,
-    emailAddress: String
+    displayName: String
+
 }, {
     timestamps: true,
     collection: 'users'

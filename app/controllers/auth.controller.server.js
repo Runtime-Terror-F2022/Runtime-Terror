@@ -53,8 +53,10 @@ export function ProcessLoginPage(req, res, next){
 export function ProcessRegisterPage(req, res, next){
     let newUser = new User({
         profileType: req.body.profileType,
-        username: req.body.username,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
         emailAddress: req.body.emailAddress,
+        username: req.body.username,
         displayName: req.body.firstName + " " + req.body.lastName
     }); 
 
@@ -91,4 +93,39 @@ export function ProcessLogoutPage(req, res, next){
     });
 
     res.redirect('/login');
+}
+
+export function DisplayProfileEditPage(req, res, next){
+    let id = req.params.id;
+
+    User.findById(id, (err, users) => {
+        if(err){
+            console.error(err);
+            res.end(err);
+        }
+        res.render('index', {title: 'Edit Profile', page: 'profiles/edit', User: users, displayName: UserDisplayName(req)});
+    })
+
+}
+
+export function ProcessProfileEditPage(req, res, next){
+    let id = req.params.id;
+    
+    let newUser = User({
+        _id: req.body.id,
+        profileType: req.body.profileType,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        emailAddress: req.body.emailAddress,
+        username: req.body.username,
+        displayName: req.body.firstName + " " + req.body.lastName
+    });
+
+    User.updateOne({_id: id}, newUser, (err, User) => {
+        if (err){
+            console.error(err);
+            res.end(err);
+        };
+        res.redirect('/');
+    })
 }

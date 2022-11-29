@@ -18,7 +18,6 @@ let localStrategy = passportLocal.Strategy;
 
 // Auth Step 3 - import the user model
 import User from './models/user.js';
-import Profile from './models/profile.js';
 
 //import mongoose module
 import mongoose from 'mongoose';
@@ -30,7 +29,6 @@ import { MongoURI, Secret } from '../config/config.js';
 import indexRouter from "./routes/index.route.server.js";
 import tournamentRouter from './routes/tournament.route.server.js';
 import authRouter from './routes/auth.route.server.js';
-import profileRouter from './routes/profile.route.server.js';
 
 
 // Instantiate Express
@@ -80,6 +78,5 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/', indexRouter);
 app.use('/', tournamentRouter);
 app.use('/', authRouter);
-app.use('/', profileRouter);
 
 export default app;
