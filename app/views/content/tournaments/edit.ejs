@@ -15,7 +15,8 @@
                 <br>
                 <div class="form-group">
                     <label for="gameTextField">Description</label>
-                    <input type="text" class="form-control" id="gameTextField" placeholder="Enter the Tournament Description" name="description"
+                    <input type="text" class="form-control" id="gameTextField"
+                        placeholder="Enter the Tournament Description" name="description"
                         value="<%= tournament.description %>" required>
                 </div>
                 <br>
@@ -33,9 +34,10 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="sizeInputField">Enter list of teams, clubs or participants separated by comma.</label>
+                    <label for="sizeInputField">Enter list of teams</label>
                     <input type="text" class="form-control" id="sizeInputField"
-                        placeholder="Enter the team names" name="teams" value="<%= tournament.teams %>"required>
+                        placeholder="Enter the team(s) names, separated by comma." name="teams"
+                        value="<%= tournament.teams %>" required>
                 </div>
                 <button class="btn btn-dark" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
