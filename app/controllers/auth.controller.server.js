@@ -82,16 +82,18 @@ export function ProcessRegisterPage(req, res, next){
 
 
 export function DisplayProfileEditPage(req, res, next){
-    let id = req.params.id;
+    // let id = req.params.id;
 
-    User.findById(id, (err, _id) => {
-        if(err){
-            console.error(err);
-            res.end(err);
-        }
-        console.log(users);
-        res.render('index', {title: 'Edit Profile', page: 'profiles/edit', User: _id, displayName: UserDisplayName(req)});
-    })
+    // User.findById(id, (err, users) => {
+    //     if(err){
+    //         console.error(err);
+    //         res.end(err);
+    //     }
+    //     console.log(users);
+    //     res.render('index', {title: 'Edit Profile', page: 'profiles/edit', User: users, displayName: UserDisplayName(req)});
+    // })
+    res.render('index', {title: 'Edit Profile', page: 'profiles/edit', User: req.user, displayName: UserDisplayName(req)});
+
 
 }
 

@@ -5,8 +5,7 @@
                 Edit Profile
             </h1>
 
-            <form class="form" method="POST">
-                <input type="hidden" name="id" value="<%= User._id %>">
+            <form class="form" method="POST">                
                 <div class="form-group">
                     <label for="nameTextField">First Name </label>
                     <input type="text" class="form-control" id="lastName" placeholder="Enter your First Name:"
@@ -33,14 +32,12 @@
                 <br>
                 <div class="form-group">
                     <label for="passTextField">Password</label>
-                    <input type="text" class="form-control" id="password placeholder="Enter your : " name="password"
-                        value="<%= User.password %>" required>
-                </div>
+                    <input type="text" class="form-control" id="password" placeholder="Enter New Password: " name="password">
+                </div> 
                 <br>
                 <div class="form-group">
                     <label for="cpassTextField">Confirm Password</label>
-                    <input type="text" class="form-control" id="confirmPassword" placeholder="Confirm Password: " name="confirmPassword"
-                        value="<%= User.confirmPassword %>" required>
+                    <input type="text" class="form-control" id="confirmPassword" placeholder="Confirm Password: " name="confirmPassword">
                 </div>
                 <br>
                 

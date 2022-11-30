@@ -4,6 +4,7 @@ import { Secret } from '../../config/config.js';
 
 export function UserDisplayName(req){
     if(req.user){
+        console.log(req.user);
         return req.user.displayName;
     }
     return '';
