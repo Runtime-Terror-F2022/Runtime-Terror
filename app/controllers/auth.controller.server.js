@@ -80,30 +80,17 @@ export function ProcessRegisterPage(req, res, next){
 
 }
 
-export function ProcessLogoutPage(req, res, next){
-    req.logOut(function(err){
-        if(err){
-            console.error(err);
-            res.end(err);
-
-        }
-
-        console.log("User logged out successfully");
-
-    });
-
-    res.redirect('/login');
-}
 
 export function DisplayProfileEditPage(req, res, next){
     let id = req.params.id;
 
-    User.findById(id, (err, users) => {
+    User.findById(id, (err, _id) => {
         if(err){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Edit Profile', page: 'profiles/edit', User: users, displayName: UserDisplayName(req)});
+        console.log(users);
+        res.render('index', {title: 'Edit Profile', page: 'profiles/edit', User: _id, displayName: UserDisplayName(req)});
     })
 
 }
@@ -128,4 +115,19 @@ export function ProcessProfileEditPage(req, res, next){
         };
         res.redirect('/');
     })
+}
+
+export function ProcessLogoutPage(req, res, next){
+    req.logOut(function(err){
+        if(err){
+            console.error(err);
+            res.end(err);
+
+        }
+
+        console.log("User logged out successfully");
+
+    });
+
+    res.redirect('/login');
 }

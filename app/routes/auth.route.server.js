@@ -16,7 +16,7 @@ router.post('/register', ProcessRegisterPage);
 // Process Logout Page
 router.get('/logout', ProcessLogoutPage);
 
-router.get('/profile-edit', AuthGuard, DisplayProfileEditPage);
+router.get('/profile-edit/:id', AuthGuard, DisplayProfileEditPage);
 router.post('/profile-edit/:id', AuthGuard, ProcessProfileEditPage);
 
 export default router;
