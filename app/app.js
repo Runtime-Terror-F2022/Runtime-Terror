@@ -29,6 +29,7 @@ import { MongoURI, Secret } from '../config/config.js';
 import indexRouter from "./routes/index.route.server.js";
 import tournamentRouter from './routes/tournament.route.server.js';
 import authRouter from './routes/auth.route.server.js';
+import forumRouter from './routes/forum.route.server.js';
 
 
 // Instantiate Express
@@ -78,5 +79,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use('/', indexRouter);
 app.use('/', tournamentRouter);
 app.use('/', authRouter);
+app.use('/', forumRouter);
+
 
 export default app;

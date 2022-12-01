@@ -16,6 +16,11 @@
           <a class="nav-link <%= (page == 'tournaments/list') ? 'active' : ''; %>" aria-current="page"
             href="/tournament-list"><i class="fa-solid fa-table-list fa-lg"></i> Tournament List</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link <%= (page == 'forums/list') ? 'active' : ''; %>" aria-current="page"
+             href="/forum-list"><i class="fa-solid fa-envelopes-bulk fa-lg"></i> Forums</a>
+        </li>
         <!-- Second Release: Login and log out Buttons linked to Nav bar using bootstrap -->
         <% if(displayName) { %>
 
