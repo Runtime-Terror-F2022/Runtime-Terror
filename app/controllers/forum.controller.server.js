@@ -11,12 +11,12 @@ export function DisplayForumList(req, res, next){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Forums', page: 'forums/list', forums: forumCollection, displayName: UserDisplayName(req) });
+        res.render('index', {title: 'Forums', page: 'forums/list', forums: forumCollection, user: req.user, displayName: UserDisplayName(req) });
     })
 }
 
 export function DisplayForumAddPage(req, res, next){
-    res.render('index', {title: 'Add a Comment', page: 'forums/edit', forum: {}, displayName: UserDisplayName(req)});
+    res.render('index', {title: 'Add a Comment', page: 'forums/edit', forum: {}, user: req.user, displayName: UserDisplayName(req)});
 }
 
 export function ProcessForumAddPage(req, res, next){
@@ -43,7 +43,7 @@ export function DisplayForumEditPage(req, res, next){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Edit Forum', page: 'forums/edit', forum: forum, displayName: UserDisplayName(req)});
+        res.render('index', {title: 'Edit Forum', page: 'forums/edit', forum: forum,  user: req.user, displayName: UserDisplayName(req)});
     })
 }
 

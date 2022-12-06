@@ -4,30 +4,37 @@
             <h1>
                 Edit Profile
             </h1>
-
-            <form class="form" method="POST">                
+            <% if(messages.length > 0) { %>
+                <div id="messageArea" class="alert alert-success ">
+                  <%= messages %>
+                </div>
+              <% } %> 
+        
+            <form class="form" method="POST" novalidate>  
+                <input type="hidden" name="id" value="<%= user._id %>"> 
+                <input type="hidden" name="id" value="<%= user.profileType%>">               
                 <div class="form-group">
                     <label for="nameTextField">First Name </label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Enter your First Name:"
-                        name="firstName" value="<%= User.firstName %>" required>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your First Name:"
+                        name="firstName" value="<%= user.firstName %>" required>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="lnameTextField">Last Name</label>
                     <input type="text" class="form-control" id="lastName" placeholder="Enter your Last Name: " name="lastName"
-                        value="<%= User.lastName %>" required>
+                        value="<%= user.lastName %>" required>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="emailTextField">Email</label>
                     <input type="text" class="form-control" id="emailAddress" placeholder="Enter your Email: " name="emailAddress"
-                        value="<%= User.emailAddress %>" required>
+                        value="<%= user.emailAddress %>" required>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="usernameTextField">Username</label>
                     <input type="text" class="form-control" id="username" placeholder="Enter your Username: " name="username"
-                        value="<%= User.username %>" required>
+                        value="<%= user.username %>" required>
                 </div>
                 <br>
                 <div class="form-group">
@@ -44,7 +51,7 @@
                 <button class="btn btn-dark" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
 
-                <a href="/profile-edit" class="btn btn-danger">
+                <a href="/" class="btn btn-danger">
                     <i class="fas fa-undo"></i> Cancel</a>
             </form>
         </div>

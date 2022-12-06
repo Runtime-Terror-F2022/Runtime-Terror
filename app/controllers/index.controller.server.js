@@ -4,7 +4,7 @@
 import { UserDisplayName } from '../utils/index.js';
 
 export function displayHomePage(req, res, next) {
-    res.render('index', { title: 'Host Tournaments', page: 'home', displayName: UserDisplayName(req) });
+    res.render('index', { title: 'Host Tournaments', page: 'home', user: req.user, displayName: UserDisplayName(req) });
 };
 
 

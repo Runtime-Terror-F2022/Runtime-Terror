@@ -15,7 +15,7 @@
   
                 <form method="POST" id="registerForm" novalidate>
                   <p >Create your own account to host or particpate in tournaments</p>
-
+                  <input type="hidden" name="id" value="<%= user._id %>">    
                   <div class="form-group">
                     <div class="row">
                       <p class="lead"><i class="fas fa-shield"></i> Select Profile Type</p>
@@ -34,10 +34,10 @@
                     <div class="row">
                       <p class="lead"><i class="fas fa-user-shield"></i> Personal Information</p>
                       <div class="col-md-6">
-                        <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                        <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name" value="<%= user.firstName %>" required>
                       </div> 
                       <div class="col-md-6">
-                        <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                        <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" value="<%= user.lastName %>" required>
                       </div>
                     </div>
                   </div>
@@ -81,7 +81,7 @@
                                                       
                   <div class="text-end mt-2">
                     <button id="submitButton" type="submit" class="btn btn-dark btn-lg">
-                      <i class="fas fa-user-plus"></i> Register</button>
+                      <i class="fas fa-user-plus"></i> Save</button>
                     <button id="cancelButton" type="reset" class="btn btn-danger btn-lg">
                       <i class="fas fa-undo"></i> Cancel</button>
                   </div>

@@ -6,7 +6,7 @@ import passport from 'passport';
 import User from '../models/user.js';
 
 // import DisplayName Utility method
-import { UserDisplayName } from '../utils/index.js';
+import { UserDisplayName, UserID } from '../utils/index.js';
 
 
 // 2 Display Functions
@@ -20,7 +20,7 @@ export function DisplayLoginPage(req, res, next){
 
 export function DisplayRegisterPage(req, res, next){
     if(!req.user){
-        return res.render('index', {title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: UserDisplayName(req)});
+        return res.render('index', {title: 'Register', page: 'register', messages: req.flash('registerMessage'), user: {}, displayName: UserDisplayName(req)});
     }
 
     return res.redirect('/tournament-list');
@@ -48,7 +48,7 @@ export function ProcessLoginPage(req, res, next){
             return res.redirect('/');
         })
     })(req, res, next);
-}
+};
 
 export function ProcessRegisterPage(req, res, next){
     let newUser = new User({
@@ -78,30 +78,19 @@ export function ProcessRegisterPage(req, res, next){
         });
     });
 
-}
+};
 
 
 export function DisplayProfileEditPage(req, res, next){
-    // let id = req.params.id;
-
-    // User.findById(id, (err, users) => {
-    //     if(err){
-    //         console.error(err);
-    //         res.end(err);
-    //     }
-    //     console.log(users);
-    //     res.render('index', {title: 'Edit Profile', page: 'profiles/edit', User: users, displayName: UserDisplayName(req)});
-    // })
-    res.render('index', {title: 'Edit Profile', page: 'profiles/edit', User: req.user, displayName: UserDisplayName(req)});
-
-
-}
+    res.render('index', { title: 'Profile', page: 'profiles/edit', user: req.user, messages: req.flash('confirmationMessage'), userID: UserID(req), displayName: UserDisplayName(req)} );
+   
+};
 
 export function ProcessProfileEditPage(req, res, next){
     let id = req.params.id;
-    
-    let newUser = User({
-        _id: req.body.id,
+
+    let newUser = ({
+        //_id: req.body.id,
         profileType: req.body.profileType,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -110,14 +99,17 @@ export function ProcessProfileEditPage(req, res, next){
         displayName: req.body.firstName + " " + req.body.lastName
     });
 
-    User.updateOne({_id: id}, newUser, (err, User) => {
-        if (err){
-            console.error(err);
-            res.end(err);
-        };
-        res.redirect('/');
-    })
-}
+        return User.updateOne({_id: id}, newUser, (err, User) => {
+            if (err){
+                console.error(err);
+                res.end(err);
+            };
+            req.flash('confirmationMessage', 'Saved!');
+            res.redirect('back');
+        });
+
+    
+};
 
 export function ProcessLogoutPage(req, res, next){
     req.logOut(function(err){

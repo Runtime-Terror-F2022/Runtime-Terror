@@ -11,12 +11,12 @@ export function DisplayTournamentList(req, res, next){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Tournament List', page: 'tournaments/list', tournaments: tournamentCollection, displayName: UserDisplayName(req), profileType: UserProfileType(req) });
+        res.render('index', {title: 'Tournament List', page: 'tournaments/list', tournaments: tournamentCollection, user: req.user, displayName: UserDisplayName(req), profileType: UserProfileType(req) });
     })
 }
 
 export function DisplayTournamentAddPage(req, res, next){
-    res.render('index', {title: 'Add Tournament', page: 'tournaments/edit', tournament: {}, displayName: UserDisplayName(req)});
+    res.render('index', {title: 'Add Tournament', page: 'tournaments/edit', tournament: {}, user: req.user, displayName: UserDisplayName(req)});
 }
 
 export function ProcessTournamentAddPage(req, res, next){
@@ -45,7 +45,7 @@ export function DisplayTournamentEditPage(req, res, next){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Edit Tournament', page: 'tournaments/edit', tournament: tournament, displayName: UserDisplayName(req)});
+        res.render('index', {title: 'Edit Tournament', page: 'tournaments/edit', tournament: tournament, user: req.user, displayName: UserDisplayName(req)});
     })
 }
 
@@ -90,6 +90,6 @@ export function DisplayBracket(req, res, next){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'View Bracket', page: 'tournaments/view', tournament: tournament, displayName: UserDisplayName(req)});
+        res.render('index', {title: 'View Bracket', page: 'tournaments/view', tournament: tournament, user: req.user, displayName: UserDisplayName(req)});
     })
 }
