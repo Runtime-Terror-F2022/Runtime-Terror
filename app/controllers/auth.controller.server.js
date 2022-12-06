@@ -103,10 +103,11 @@ export function ProcessProfileEditPage(req, res, next){
             if (err){
                 console.error(err);
                 res.end(err);
-            };
+            }; 
+            
             req.flash('confirmationMessage', 'Saved!');
             res.redirect('back');
-        });
+        });         
 
     
 };
