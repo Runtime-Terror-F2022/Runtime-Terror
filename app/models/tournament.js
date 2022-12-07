@@ -8,7 +8,22 @@ const tournamentSchema = new Schema({
     description: String,
     startDate: String,
     endDate: String,
-    teams: String
+    team1: String,
+    team2: String,
+    team3: String,
+    team4: String,
+    team5: String,
+    team6: String,
+    team7: String,
+    team8: String,
+    team9: String,
+    team10: String,
+    team11: String,
+    team12: String,
+    team13: String,
+    team14: String,
+    team15: String,
+    team16: String
 }, {
     timestamps: true,
     collection: 'tournaments'

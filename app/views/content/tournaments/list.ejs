@@ -16,7 +16,6 @@
                         <th scope="col">Description</th>
                         <th scope="col">Start Date</th>
                         <th scope="col">End Date</th>
-                        <th scope="col">Teams/Participants</th>
                         <% if(displayName) { %>
                         <th scope="col" class="text-center">View</th>
                             <% if(profileType == "Owner") { %>
@@ -45,10 +44,7 @@
                             <td>
                                 <%= tournaments[count].endDate %>
                             </td>
-                            <td>
-                                <%= tournaments[count].teams %>
-                            </td>
-
+                          
                             <% if(displayName) { %> 
                             <td class="text-center col-1">
                                 <a href="/tournament-view/<%= tournaments[count]._id %>" class="btn btn-dark btn-sm">

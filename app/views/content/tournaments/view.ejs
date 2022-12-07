@@ -1,101 +1,508 @@
 <div class="t-container">
+    <form class="form" method="POST">
+        <div class="roundHeaders">
+            <h4 class="round-header">Round 16
+            
+            </h4>
+            <h4 class="round-header">Quarter-Finals
+            </h4>
+            <h4 class="round-header">Semi-Finals
+            </h4>
+            <h4 class="round-header">Finals
+            </h4>
+            <h4 class="round-header">Champion</h4>
+        </div>
+        <div class="t-brackets">
 
+            <ul class="bracket-card bracket-1">
+                <button class="btn btn-light" type="submit">
+                    <i class="fas fa-edit"></i> Submit Result</button>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId">
+                        <%= tournament.team1 %>
+                    </p>
+                    <p class="score">
+                        <input type="number" id="team-score" name="score1" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value= <%=score[0].score1 %>>
+                        -
+                        <input type="number" id="team-score" name="score2" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score2 %>>
+                    </p>
+                    <p class="teamId">
+                        <%= tournament.team2 %>
+                    </p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId">
+                        <%= tournament.team3 %>
+                    </p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="score3" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score3 %>>
+                        -
+                        <input type="number" id="team-score" name="score4" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score4 %>>
+                    </p>
+                    </p>
+                    <p class="teamId">
+                        <%= tournament.team4 %>
+                    </p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId">
+                        <%= tournament.team5 %>
+                    </p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="score5" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score5 %>>
+                        -
+                        <input type="number" id="team-score" name="score6" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score6 %>>
+                    </p>
+                    </p>
+                    <p class="teamId">
+                        <%= tournament.team6 %>
+                    </p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId">
+                        <%= tournament.team7 %>
+                    </p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="score7" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score7 %>>
+                        -
+                        <input type="number" id="team-score" name="score8" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score8 %>>
+                    </p>
+                    </p>
+                    <p class="teamId">
+                        <%= tournament.team8 %>
+                    </p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId">
+                        <%= tournament.team9 %>
+                    </p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="score9" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score9 %>>
+                        -
+                        <input type="number" id="team-score" name="score10" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score10 %>>
+                    </p>
+                    </p>
+                    <p class="teamId">
+                        <%= tournament.team10 %>
+                    </p>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId">
+                        <%= tournament.team11 %>
+                    </p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="score11" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score11 %>>
+                        -
+                        <input type="number" id="team-score" name="score12" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score12 %>>
+                    </p>
+                    </p>
+                    <p class="teamId">
+                        <%= tournament.team12 %>
+                    </p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId">
+                        <%= tournament.team13 %>
+                    </p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="score13" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score13 %>>
+                        -
+                        <input type="number" id="team-score" name="score14" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score14 %>>
+                    </p>
+                    </p>
+                    <p class="teamId">
+                        <%= tournament.team14 %>
+                    </p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId">
+                        <%= tournament.team15 %>
+                    </p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="score15" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score15 %>>
+                        -
+                        <input type="number" id="team-score" name="score16" min="0" max="99" placeholder="0"
+                            onchange="scoreFunction()" value=<%=score[0].score16 %>>
+                    </p>
+                    </p>
+                    <p class="teamId">
+                        <%= tournament.team16 %>
+                    </p>
+                </li>
 
-    <div class="roundHeaders">
-        <h4 class="round-header">Round 16</h4>
-        <h4 class="round-header">Quarter-Finals</h4>
-        <h4 class="round-header">Semi-Finals</h4>
-        <h4 class="round-header">Finals</h4>
-        <h4 class="round-header">Champion</h4>
-    </div>
-    <div class="t-brackets">
-        <ul class="bracket-card bracket-1">
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
+            </ul>
+            <ul class="bracket-card bracket-2">
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId" id="team1QF">TBA</p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="scoreQF1" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionQF()" value=<%=score[0].score17 %>>
+                        -
+                        <input type="number" id="team-score" name="scoreQF2" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionQF()" value=<%=score[0].score18 %>>
+                    </p>
+                    </p>
+                    <p class="teamId" id="team2QF">TBA</p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId" id="team3QF">TBA</p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="scoreQF3" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionQF()" value=<%=score[0].score19 %>>
+                        -
+                        <input type="number" id="team-score" name="scoreQF4" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionQF()" value=<%=score[0].score20 %>>
+                    </p>
+                    </p>
+                    <p class="teamId" id="team4QF">TBA</p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId" id="team5QF">TBA</p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="scoreQF5" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionQF()" value=<%=score[0].score21 %>>
+                        -
+                        <input type="number" id="team-score" name="scoreQF6" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionQF()" value=<%=score[0].score22 %> %>>
+                    </p>
+                    </p>
+                    <p class="teamId" id="team6QF">TBA</p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId" id="team7QF">TBA</p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="scoreQF7" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionQF()" value=<%=score[0].score23 %>>
+                        -
+                        <input type="number" id="team-score" name="scoreQF8" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionQF()" value=<%=score[0].score24 %>>
+                    </p>
+                    </p>
+                    <p class="teamId" id="team8QF">TBA</p>
+                </li>
+            </ul>
+            <ul class="bracket-card bracket-3">
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId" id="team1SF">TBA</p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="scoreSF1" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionSF()" value=<%=score[0].score25 %>>
+                        -
+                        <input type="number" id="team-score" name="scoreSF2" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionSF()" value=<%=score[0].score26 %>>
+                    </p>
+                    </p>
+                    <p class="teamId" id="team2SF">TBA</p>
+                </li>
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId" id="team3SF">TBA</p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="scoreSF3" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionSF()" value=<%=score[0].score27 %>>
+                        -
+                        <input type="number" id="team-score" name="scoreSF4" min="0" max="99" placeholder="0"
+                            onchange="scoreFunctionSF()" value=<%=score[0].score28 %>>
+                    </p>
+                    </p>
+                    <p class="teamId" id="team4SF">TBA</p>
+                </li>
+            </ul>
+            <ul class="bracket-card bracket-4">
+                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                    <p class="teamId" id="team1Final">TBA</p>
+                    <p class="score">
+                    <p class="score">
+                        <input type="number" id="team-score" name="scoreFinal1" min="0" max="99" placeholder="0"
+                            onchange="scoreFuntionFinals()" value=<%=score[0].score29 %>>
+                        -
+                        <input type="number" id="team-score" name="scoreFinal2" min="0" max="99" placeholder="0"
+                            onchange="scoreFuntionFinals()" value=<%=score[0].score30 %>>
+                    </p>
+                    </p>
+                    <p class="teamId" id="team2Final">TBA</p>
+                </li>
+            </ul>
+            <ul class="bracket-card bracket-5">
+                <li class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                    <p class="teamId" id="teamWinner">TBA</p>
 
-        </ul>
-        <ul class="bracket-card bracket-2">
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-        </ul>
-        <ul class="bracket-card bracket-3">
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-        </ul>
-        <ul class="bracket-card bracket-4">
-            <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-                <p class="score">0-0</p>
-                <p class="teamId">TBA</p>
-            </li>
-        </ul>
-        <ul class="bracket-card bracket-5">
-            <li class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-                <p class="teamId">TBA</p>
-
-            </li>
-        </ul>
-    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
+<script>
+    var teamsQF = [];
+    var teamsSF = [];
+    var teamsFinal = [];
+    var teamChamp = [];
+    function scoreFunction() {
+        teamsQF = [];
+        var team1 = "<%= tournament.team1 %>";
+        var team2 = "<%= tournament.team2 %>";
+        var score1 = document.getElementsByName("score1")[0].value;
+        var score2 = document.getElementsByName("score2")[0].value;
+        if (score1 > score2) {
+            document.getElementById("team1QF").innerHTML = team1;
+            teamsQF[0] = team1;
+        }
+        else if (score2 > score1) {
+            document.getElementById("team1QF").innerHTML = team2;
+            teamsQF[0] = team2;
+        }
+        else {
+            document.getElementById("team1QF").innerHTML = "TBA";
+        }
+        var team3 = "<%= tournament.team3 %>";
+        var team4 = "<%= tournament.team4 %>";
+        var score3 = document.getElementsByName("score3")[0].value;
+        var score4 = document.getElementsByName("score4")[0].value;
+        if (score3 > score4) {
+            document.getElementById("team2QF").innerHTML = team3;
+            teamsQF[1] = team3;
+        }
+        else if (score4 > score3) {
+            document.getElementById("team2QF").innerHTML = team4;
+            teamsQF[1] = team4;
+        }
+        else {
+            document.getElementById("team2QF").innerHTML = "TBA";
+        }
+        var team5 = "<%= tournament.team5 %>";
+        var team6 = "<%= tournament.team6 %>";
+        var score5 = document.getElementsByName("score5")[0].value;
+        var score6 = document.getElementsByName("score6")[0].value;
+        if (score5 > score6) {
+            document.getElementById("team3QF").innerHTML = team5;
+            teamsQF[2] = team5;
+        }
+        else if (score6 > score5) {
+            document.getElementById("team3QF").innerHTML = team6;
+            teamsQF[2] = team6;
+        }
+        else {
+            document.getElementById("team3QF").innerHTML = "TBA";
+        }
+        var team7 = "<%= tournament.team7 %>";
+        var team8 = "<%= tournament.team8 %>";
+        var score7 = document.getElementsByName("score7")[0].value;
+        var score8 = document.getElementsByName("score8")[0].value;
+        if (score7 > score8) {
+            document.getElementById("team4QF").innerHTML = team7;
+            teamsQF[3] = team7;
+        }
+        else if (score8 > score7) {
+            document.getElementById("team4QF").innerHTML = team8;
+            teamsQF[3] = team8;
+        }
+        else {
+            document.getElementById("team4QF").innerHTML = "TBA";
+        }
+        var team9 = "<%= tournament.team9 %>";
+        var team10 = "<%= tournament.team10 %>";
+        var score9 = document.getElementsByName("score9")[0].value;
+        var score10 = document.getElementsByName("score10")[0].value;
+        if (score9 > score10) {
+            document.getElementById("team5QF").innerHTML = team9;
+            teamsQF[4] = team9;
+        }
+        else if (score10 > score9) {
+            document.getElementById("team5QF").innerHTML = team10;
+            teamsQF[4] = team10;
+        }
+        else {
+            document.getElementById("team5QF").innerHTML = "TBA";
+        }
+        var team11 = "<%= tournament.team11 %>";
+        var team12 = "<%= tournament.team12 %>";
+        var score11 = document.getElementsByName("score11")[0].value;
+        var score12 = document.getElementsByName("score12")[0].value;
+        if (score11 > score12) {
+            document.getElementById("team6QF").innerHTML = team11;
+            teamsQF[5] = team11;
+        }
+        else if (score12 > score11) {
+            document.getElementById("team6QF").innerHTML = team12;
+            teamsQF[5] = team12;
+        }
+        else {
+            document.getElementById("team6QF").innerHTML = "TBA";
+        }
+        var team13 = "<%= tournament.team13 %>";
+        var team14 = "<%= tournament.team14 %>";
+        var score13 = document.getElementsByName("score13")[0].value;
+        var score14 = document.getElementsByName("score14")[0].value;
+        if (score13 > score14) {
+            document.getElementById("team7QF").innerHTML = team13;
+            teamsQF[6] = team13;
+        }
+        else if (score14 > score13) {
+            document.getElementById("team7QF").innerHTML = team14;
+            teamsQF[6] = team14;
+        }
+        else {
+            document.getElementById("team7QF").innerHTML = "TBA";
+        }
+        var team15 = "<%= tournament.team15 %>";
+        var team16 = "<%= tournament.team16 %>";
+        var score15 = document.getElementsByName("score15")[0].value;
+        var score16 = document.getElementsByName("score16")[0].value;
+        if (score15 > score16) {
+            document.getElementById("team8QF").innerHTML = team15;
+            teamsQF[7] = team15;
+        }
+        else if (score16 > score15) {
+            document.getElementById("team8QF").innerHTML = team16;
+            teamsQF[7] = team16;
+        }
+        else {
+            document.getElementById("team8QF").innerHTML = "TBA";
+        }
+    }
+    function scoreFunctionQF() {
+        teamsSF = [];
+        var team1 = teamsQF[0];
+        var team2 = teamsQF[1];
+        var score1 = document.getElementsByName("scoreQF1")[0].value;
+        var score2 = document.getElementsByName("scoreQF2")[0].value;
+        if (score1 > score2) {
+            document.getElementById("team1SF").innerHTML = team1;
+            teamsSF.push(team1);
+        }
+        else if (score2 > score1) {
+            document.getElementById("team1SF").innerHTML = team2;
+            teamsSF.push(team2);
+        }
+        else {
+            document.getElementById("team1SF").innerHTML = "TBA";
+        }
+        var team3 = teamsQF[2];
+        var team4 = teamsQF[3];
+        var score3 = document.getElementsByName("scoreQF3")[0].value;
+        var score4 = document.getElementsByName("scoreQF4")[0].value;
+        if (score3 > score4) {
+            document.getElementById("team2SF").innerHTML = team3;
+            teamsSF[team3];
+        }
+        else if (score4 > score3) {
+            document.getElementById("team2SF").innerHTML = team4;
+            teamsSF.push(team4);
+        }
+        else {
+            document.getElementById("team2SF").innerHTML = "TBA";
+        }
+        var team5 = teamsQF[4];
+        var team6 = teamsQF[5];
+        var score5 = document.getElementsByName("scoreQF5")[0].value;
+        var score6 = document.getElementsByName("scoreQF6")[0].value;
+        if (score5 > score6) {
+            document.getElementById("team3SF").innerHTML = team5;
+            teamsSF.push(team5);
+        }
+        else if (score6 > score5) {
+            document.getElementById("team3SF").innerHTML = team6;
+            teamsSF.push(team6);
+        }
+        else {
+            document.getElementById("team3SF").innerHTML = "TBA";
+        }
+        var team7 = teamsQF[6];
+        var team8 = teamsQF[7];
+        var score7 = document.getElementsByName("scoreQF7")[0].value;
+        var score8 = document.getElementsByName("scoreQF8")[0].value;
+        if (score7 > score8) {
+            document.getElementById("team4SF").innerHTML = team7;
+            teamsSF[3] = team7;
+        }
+        else if (score8 > score7) {
+            document.getElementById("team4SF").innerHTML = team8;
+            teamsSF[3] = team8;
+        }
+        else {
+            document.getElementById("team4SF").innerHTML = "TBA";
+        }
+    }
+    function scoreFunctionSF() {
+        teamsFinal = [];
+        var team1 = teamsSF[0];
+        var team2 = teamsSF[1];
+        var score1 = document.getElementsByName("scoreSF1")[0].value;
+        var score2 = document.getElementsByName("scoreSF2")[0].value;
+        if (score1 > score2) {
+            document.getElementById("team1Final").innerHTML = team1;
+            teamsFinal.push(team1);
+        }
+        else if (score2 > score1) {
+            document.getElementById("team1Final").innerHTML = team2;
+            teamsFinal.push(team2);
+        }
+        else {
+            document.getElementById("team1Final").innerHTML = "TBA";
+        }
+        var team3 = teamsSF[2];
+        var team4 = teamsSF[3];
+        var score1 = document.getElementsByName("scoreSF3")[0].value;
+        var score2 = document.getElementsByName("scoreSF4")[0].value;
+        if (score1 > score2) {
+            document.getElementById("team2Final").innerHTML = team3;
+            teamsFinal.push(team3);
+        }
+        else if (score2 > score1) {
+            document.getElementById("team2Final").innerHTML = team4;
+            teamsFinal.push(team4);
+        }
+        else {
+            document.getElementById("team2Final").innerHTML = "TBA";
+        }
+        console.log(teamsSF);
+    }
+    function scoreFuntionFinals() {
+        teamChamp = [];
+        var team1 = teamsFinal[0];
+        var team2 = teamsFinal[1];
+        var score1 = document.getElementsByName("scoreFinal1")[0].value;
+        var score2 = document.getElementsByName("scoreFinal2")[0].value;
+        if (score1 > score2) {
+            document.getElementById("teamWinner").innerHTML = team1;
+            teamChamp.push(team1);
+        }
+        else if (score2 > score1) {
+            document.getElementById("teamWinner").innerHTML = team2;
+            teamChamp.push(team2);
+        }
+        else{
+            document.getElementById("teamWinner").innerHTML = "TBA";
+        }
+    }
+    window.onload = scoreFunction();
+    window.onload = scoreFunctionQF();
+    window.onload = scoreFunctionSF();
+    window.onload = scoreFuntionFinals();
+</script>

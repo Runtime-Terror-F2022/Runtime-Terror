@@ -1,6 +1,7 @@
 import { Router } from "express";
 
-import { DisplayTournamentList, DisplayTournamentAddPage, ProcessTournamentAddPage, DisplayTournamentEditPage, ProcessTournamentEditPage, ProcessTournamentDelete, DisplayBracket } from "../controllers/tournament.controller.server.js";
+import { DisplayTournamentList, DisplayTournamentAddPage, ProcessTournamentAddPage, DisplayTournamentEditPage, ProcessTournamentEditPage, 
+    ProcessTournamentDelete, DisplayBracket, SubmitResults } from "../controllers/tournament.controller.server.js";
 
 import { AuthGuard } from "../utils/index.js";
 
@@ -14,5 +15,6 @@ router.get('/tournament-edit/:id', AuthGuard, DisplayTournamentEditPage);
 router.post('/tournament-edit/:id', AuthGuard, ProcessTournamentEditPage);
 router.get('/tournament-delete/:id', AuthGuard, ProcessTournamentDelete);
 router.get('/tournament-view/:id', DisplayBracket);
+router.post('/tournament-view/:id', SubmitResults);
 
 export default router;
