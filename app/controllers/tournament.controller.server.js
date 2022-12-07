@@ -178,7 +178,7 @@ export function DisplayBracket(req, res, next) {
                 console.error(err);
                 res.end(err);
             }
-            res.render('index', { title: 'View Bracket', page: 'tournaments/view', tournament: tournament, score: scoreCollection, user: req.user, displayName: UserDisplayName(req) });
+            res.render('index', { title: 'View Bracket', page: 'tournaments/view', tournament: tournament, score: scoreCollection, user: req.user, displayName: UserDisplayName(req),  profileType: UserProfileType(req) });
         })
     })
 }

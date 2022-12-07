@@ -15,8 +15,10 @@
         <div class="t-brackets">
 
             <ul class="bracket-card bracket-1">
+                <% if(profileType == "Owner") { %> 
                 <button class="btn btn-light" type="submit">
                     <i class="fas fa-edit"></i> Submit Result</button>
+                <% } %>
                 <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
                     <p class="teamId">
                         <%= tournament.team1 %>
