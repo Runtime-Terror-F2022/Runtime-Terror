@@ -10,35 +10,41 @@
                     <div class="col-lg-9 mb-3">
                         <div class="row text-left mb-5">
                             <div class="col-lg-6 mb-3 mb-sm-0">
-                                    <div style="visibility: hidden; display: none; width: 285px; height: 801px; margin: 0px; float: none; position: static; inset: 85px auto auto;"></div><div data-settings="{&quot;parent&quot;:&quot;#content&quot;,&quot;mind&quot;:&quot;#header&quot;,&quot;top&quot;:10,&quot;breakpoint&quot;:992}" data-toggle="sticky" class="sticky" style="top: 85px;"><div class="sticky-inner">
+             
                                         <div class="button">
                                           
                                             <a href="/forum-add">
                                                 <button class="createButton"> Start a Forum! </button>
                                             </a>
+                                          
                            
                 </div>
                 </div>
+               
                 </div>
                 </div>  
-        </div>
+      
+        <h4 style="text-align:center;">Participate in the forum below!</h4>
                       <!-- End of post 1 -->
                       <% for(let count=0; count < forums.length; count++) { %>
                       <div class="card row-hover pos-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-0">
                         <div class="row align-items-center">
                           <div class="col-md-8 mb-3 mb-sm-0">
                             
-                            <h5>
+                            <h2>
                                 <%= forums[count].topic %>
-                            </h5>
+                            </h2>
                             <p class="text-sm"><span class="op-6">Posted by <%= forums[count].name %></span>  </p>
                             <p><%= forums[count].comment %></p>
                           </div>
                           <div class="col-md-4 op-7">
                             <div class="row text-center op-7">
+                              <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">122 Replys</span> </div>
+                              
                                 <% if(displayName) { %> 
 
                                     <td class="text-center col-1">
+                                      
                                         <a href="/forum-edit/<%= forums[count]._id %>" class="btn btn-dark btn-sm">
                                             <i class="fas fa-pencil-alt"></i> Edit</a>
                                     </td>
@@ -49,7 +55,7 @@
                                             <i class="fas fa-trash-alt"></i> Delete</a>
                                     </td>
                                        
-                                       
+                                      
         
                                        
                                         <% } %>
