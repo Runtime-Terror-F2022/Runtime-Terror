@@ -228,7 +228,8 @@ a.text-primary:hover {
     font-weight: 700 !important;
 }
 
-#team-score {
+
+.team-score {
     background-color: #212529;
     color: white;
     border-top: none;
