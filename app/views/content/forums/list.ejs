@@ -1,75 +1,77 @@
 <div class="container">
 
-    <h1>Forums</h1>
-   
-    <div class="row">
-        <div class="col">
-            <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-            <div class="container">
-                  <div class="row">
-                    <!-- Main content -->
-                    <div class="col-lg-9 mb-3">
-                        <div class="row text-left mb-5">
-                            <div class="col-lg-6 mb-3 mb-sm-0">
-             
-                                        <div class="button">
-                                          
-                                            <a href="/forum-add">
-                                                <button class="createButton"> Start a Forum! </button>
-                                            </a>
-                                          
-                           
-                </div>
-                </div>
-               
-                </div>
-                </div>  
-      
-        <h4 style="text-align:center;">Participate in the forum below!</h4>
-                      <!-- End of post 1 -->
-                      <% for(let count=0; count < forums.length; count++) { %>
-                      <div class="card row-hover pos-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-0">
-                        <div class="row align-items-center">
-                          <div class="col-md-8 mb-3 mb-sm-0">
-                            
-                            <h2>
-                                <%= forums[count].topic %>
-                            </h2>
-                            <p class="text-sm"><span class="op-6">Posted by <%= forums[count].name %></span>  </p>
-                            <p><%= forums[count].comment %></p>
-                          </div>
-                          <div class="col-md-4 op-7">
-                            <div class="row text-center op-7">
+  <h1>Forums</h1>
 
-                              
-                                <% if(displayName) { %> 
+  <div class="row">
+    <div class="col">
+      <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+      <div class="container">
+        <div class="row">
+          <!-- Main content -->
+          <div class="col-lg-9 mb-3">
+            <div class="row text-left mb-5">
+              <div class="col-lg-6 mb-3 mb-sm-0">
 
-                                  
+                <div class="button">
 
-                                    <td class="text-center col-1">
-                                      
-                                        <a href="/forum-edit/<%= forums[count]._id %>" class="btn btn-dark btn-sm">
-                                            <i class="fas fa-pencil-alt"></i> Edit</a>
-                                    </td>
-                                    
-                                    <td class="text-center col-1">
-                                      <a href="/forum-delete/<%= forums[count]._id %>"
-                                          class="btn btn-danger btn-sm">
-                                          <i class="fas fa-trash-alt"></i> Delete</a>
-                                  </td>
-                                       
-                                      
-        
-                                       
-                                        <% } %>
-                             
-                            </div>
-                           
-                          </div>
-                        </div>
-                      </div>
-                    
+                  <a href="/forum-add">
+                    <button class="createButton"> Start a Forum! </button>
+                  </a>
+
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <h4 style="text-align:center;">Participate in the forum below!</h4>
+          <!-- End of post 1 -->
+          <% for(let count=0; count < forums.length; count++) { %>
+            <div
+              class="card forum row-hover pos-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-0">
+              <div class="row align-items-center">
+                <div class="col-md-8 mb-3 mb-sm-0">
+
+                  <h2>
+                    <%= forums[count].topic %>
+                  </h2>
+                  <p class="text-sm"><span class="op-6">Posted by <%= forums[count].name %></span> </p>
+                  <p>
+                    <%= forums[count].comment %>
+                  </p>
+                </div>
+                <div class="col-md-4 op-7">
+                  <div class="row text-center op-7">
+
+
+                    <% if(displayName) { %>
+                      <td class="text-center col-1">
+
+                        <a href="/forum-comments/<%= forums[count]._id %>" class="btn btn-warning btn-sm">
+                          <i class="fas fa-comment-alt"></i> Edit</a>
+                      </td>
+
+                      <% if(profileType == "Owner") { %> 
+                        <td class="text-center col-1">
+
+                          <a href="/forum-edit/<%= forums[count]._id %>" class="btn btn-dark btn-sm">
+                            <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+
+                        <td class="text-center col-1">
+                          <a href="/forum-delete/<%= forums[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Delete</a>
+                        </td>
 
                       <% } %>
-                      
-            
+                    <% } %>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <% } %>

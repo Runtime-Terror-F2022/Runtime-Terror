@@ -1,5 +1,8 @@
+import bodyParser from 'body-parser';
+
 //importing models
 import forumModel from '../models/forum.js';
+import commentModel from '../models/forum-comments.js';
 
 // import DisplayName Utility method
 import { UserDisplayName, UserProfileType } from '../utils/index.js';
@@ -11,7 +14,7 @@ export function DisplayForumList(req, res, next){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Forums', page: 'forums/list', forums: forumCollection, user: req.user, displayName: UserDisplayName(req) });
+        res.render('index', {title: 'Forums', page: 'forums/list', forums: forumCollection, user: req.user, displayName: UserDisplayName(req), profileType: UserProfileType(req) });
     })
 }
 
@@ -43,7 +46,7 @@ export function DisplayForumEditPage(req, res, next){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: 'Edit Forum', page: 'forums/edit', forum: forum,  user: req.user, displayName: UserDisplayName(req)});
+        res.render('index', {title: 'Edit Forum', page: 'forums/edit', forum: forum,  user: req.user, displayName: UserDisplayName(req), profileType: UserProfileType(req)});
     })
 }
 
@@ -79,3 +82,41 @@ export function ProcessForumDelete(req, res, next){
     })
 }
 
+export function SendComments(req, res, next){
+    let newComment = commentModel({
+        username: req.body.username,
+        message: req.body.message
+    });
+
+    commentModel.create(newComment, (err, Comment) => {
+        if(err){
+            console.error(err);
+            res.end(err);
+        };
+        res.redirect('/forum-comments/:id');
+    })
+}
+
+export function DisplayCommentsPage(req, res, next){
+
+    forumModel.find(function(err, forumCollection){
+        if(err){
+            console.error(err);
+            res.end(err);
+        }
+        res.render('index', {title: '', page: 'forums/forum-comments', forums: forumCollection, user: req.user, displayName: UserDisplayName(req), profileType: UserProfileType(req), comments: req.commentModel});
+        GetComments(req.commentModel);
+    })
+
+}
+
+export function GetComments(req, res, next){
+
+    commentModel.findById(function(err, commentCollection){
+        if(err){
+            console.error(err);
+            res.end(err);
+        }
+        res.render('index', {comments: commentCollection});
+    })
+}
