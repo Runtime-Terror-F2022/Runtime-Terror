@@ -38,6 +38,11 @@
                             <div class="row text-center op-7">
                                 <% if(displayName) { %> 
 
+                                  <td class="text-center col-1">
+                                    <a href="/forum-comments/<%= forums[count]._id %>" class="btn btn-warning btn-sm">
+                                        <i class="fas fa-comment-alt"></i> Comment</a>
+                                  </td>
+                                  <% if(profileType == "Owner") { %>
                                     <td class="text-center col-1">
                                         <a href="/forum-edit/<%= forums[count]._id %>" class="btn btn-dark btn-sm">
                                             <i class="fas fa-pencil-alt"></i> Edit</a>
@@ -48,11 +53,8 @@
                                             class="btn btn-danger btn-sm">
                                             <i class="fas fa-trash-alt"></i> Delete</a>
                                     </td>
-                                       
-                                       
-        
-                                       
-                                        <% } %>
+                                  <% } %>
+                                <% } %>
                              
                             </div>
                            

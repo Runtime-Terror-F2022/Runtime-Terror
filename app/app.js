@@ -7,6 +7,7 @@ import session from 'express-session';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
+import bodyParser from 'body-parser';
 
 // Auth Step 1 - import modules
 import passport from 'passport';
@@ -42,6 +43,7 @@ import forumRouter from './routes/forum.route.server.js';
 // Import Api Routes
 
 import authApiRouter from './routes/api/auth-api.route.server.js';
+
 
 
 // Instantiate Express
@@ -106,6 +108,11 @@ let strategy = new JWTStrategy(jwtOptions, (jwt_payload, done) => {
 });
 
 passport.use(strategy);
+
+// Body parser to decode comments 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
 
 // Use routes
 app.use('/', indexRouter);
