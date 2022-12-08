@@ -181,11 +181,13 @@ p {
     top: -650%;
 }
 
-.bracket-card:first-of-type .card:before {
+.bracket-card:first-of-type .card:before,
+.forum:before {
     display: none;
 }
 
-.bracket-4 .card:after {
+.bracket-4 .card:after,
+.forum:after {
     display: none;
 }
 
@@ -197,23 +199,31 @@ p {
 
 
 
-body{
-    margin-top:20px;
-    background:#eee;
+body {
+    margin-top: 20px;
+    background: #eee;
     color: #708090;
 }
+
 .icon-1x {
     font-size: 24px !important;
 }
-a{
-    text-decoration:none;    
+
+a {
+    text-decoration: none;
 }
-.text-primary, a.text-primary:focus, a.text-primary:hover {
-    color: #00ADBB!important;
+
+.text-primary,
+a.text-primary:focus,
+a.text-primary:hover {
+    color: #00ADBB !important;
 }
-.text-black, .text-hover-black:hover {
+
+.text-black,
+.text-hover-black:hover {
     color: #000 !important;
 }
+
 .font-weight-bold {
     font-weight: 700 !important;
 }
