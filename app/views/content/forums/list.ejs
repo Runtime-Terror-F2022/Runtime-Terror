@@ -1,4 +1,5 @@
 <div class="container">
+
     <h1>Forums</h1>
    
     <div class="row">
@@ -39,9 +40,11 @@
                           </div>
                           <div class="col-md-4 op-7">
                             <div class="row text-center op-7">
-                              <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">122 Replys</span> </div>
+
                               
                                 <% if(displayName) { %> 
+
+                                  
 
                                     <td class="text-center col-1">
                                       
@@ -50,10 +53,10 @@
                                     </td>
                                     
                                     <td class="text-center col-1">
-                                        <a href="/forum-delete/<%= forums[count]._id %>"
-                                            class="btn btn-danger btn-sm">
-                                            <i class="fas fa-trash-alt"></i> Delete</a>
-                                    </td>
+                                      <a href="/forum-delete/<%= forums[count]._id %>"
+                                          class="btn btn-danger btn-sm">
+                                          <i class="fas fa-trash-alt"></i> Delete</a>
+                                  </td>
                                        
                                       
         
