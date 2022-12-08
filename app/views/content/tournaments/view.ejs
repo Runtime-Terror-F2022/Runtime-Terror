@@ -254,6 +254,7 @@
             <ul class="bracket-card bracket-5">
                 <li class="card text-white bg-warning mb-3" style="max-width: 18rem;">
                     <p class="teamId" id="teamWinner">TBA</p>
+                    <a href = "/result">View Result</a>
 
                 </li>
             </ul>
@@ -261,10 +262,10 @@
     </form>
 </div>
 <script>
-    var teamsQF = [];
-    var teamsSF = [];
-    var teamsFinal = [];
-    var teamChamp = [];
+   export  var teamsQF = [];
+   export var teamsSF = [];
+   export var teamsFinal = [];
+   export var teamChamp = [];
     function scoreFunction() {
         teamsQF = [];
         var team1 = "<%= tournament.team1 %>";

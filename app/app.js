@@ -38,6 +38,7 @@ import indexRouter from "./routes/index.route.server.js";
 import tournamentRouter from './routes/tournament.route.server.js';
 import authRouter from './routes/auth.route.server.js';
 import forumRouter from './routes/forum.route.server.js';
+import resultRouter from './routes/result.route.server.js';
 
 // Import Api Routes
 
@@ -112,6 +113,7 @@ app.use('/', indexRouter);
 app.use('/', tournamentRouter);
 app.use('/', authRouter);
 app.use('/', forumRouter);
+app.use('/', resultRouter);
 
 // Use API Routes
 app.use('/api/auth', authApiRouter);
