@@ -24,10 +24,10 @@
                         <%= tournament.team1 %>
                     </p>
                     <p class="score">
-                        <input type="number" class="team-score" name="score1" min="0" max="99" placeholder="0"
+                        <input id="final16Score1" type="number" class="team-score" name="score1" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value= <%=score[0].score1 %>>
                         -
-                        <input type="number" class="team-score" name="score2" min="0" max="99" placeholder="0"
+                        <input id="final16Score2" type="number" class="team-score" name="score2" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score2 %>>
                     </p>
                     <p class="teamId" id="final16Game1Team2">
@@ -40,10 +40,10 @@
                     </p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" class="team-score" name="score3" min="0" max="99" placeholder="0"
+                        <input id="final16Score3" type="number" class="team-score" name="score3" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score3 %>>
                         -
-                        <input type="number" class="team-score" name="score4" min="0" max="99" placeholder="0"
+                        <input id="final16Score4" type="number" class="team-score" name="score4" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score4 %>>
                     </p>
                     </p>
@@ -57,10 +57,10 @@
                     </p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" class="team-score" name="score5" min="0" max="99" placeholder="0"
+                        <input id="final16Score5" type="number" class="team-score" name="score5" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score5 %>>
                         -
-                        <input type="number" class="team-score" name="score6" min="0" max="99" placeholder="0"
+                        <input id="final16Score6" type="number" class="team-score" name="score6" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score6 %>>
                     </p>
                     </p>
@@ -74,10 +74,10 @@
                     </p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" class="team-score" name="score7" min="0" max="99" placeholder="0"
+                        <input id="final16Score7" type="number" class="team-score" name="score7" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score7 %>>
                         -
-                        <input type="number" class="team-score" name="score8" min="0" max="99" placeholder="0"
+                        <input id="final16Score8" type="number" class="team-score" name="score8" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score8 %>>
                     </p>
                     </p>
@@ -91,10 +91,10 @@
                     </p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" class="team-score" name="score9" min="0" max="99" placeholder="0"
+                        <input id="final16Score9" type="number" class="team-score" name="score9" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score9 %>>
                         -
-                        <input type="number" class="team-score" name="score10" min="0" max="99" placeholder="0"
+                        <input id="final16Score10" type="number" class="team-score" name="score10" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score10 %>>
                     </p>
                     </p>
@@ -107,10 +107,10 @@
                     </p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" class="team-score" name="score11" min="0" max="99" placeholder="0"
+                        <input id="final16Score11" type="number" class="team-score" name="score11" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score11 %>>
                         -
-                        <input type="number" class="team-score" name="score12" min="0" max="99" placeholder="0"
+                        <input id="final16Score12" type="number" class="team-score" name="score12" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score12 %>>
                     </p>
                     </p>
@@ -124,10 +124,10 @@
                     </p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" class="team-score" name="score13" min="0" max="99" placeholder="0"
+                        <input id="final16Score13" type="number" class="team-score" name="score13" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score13 %>>
                         -
-                        <input type="number" class="team-score" name="score14" min="0" max="99" placeholder="0"
+                        <input id="final16Score14" type="number" class="team-score" name="score14" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score14 %>>
                     </p>
                     </p>
@@ -141,10 +141,10 @@
                     </p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" class="team-score" name="score15" min="0" max="99" placeholder="0"
+                        <input id="final16Score15" type="number" class="team-score" name="score15" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score15 %>>
                         -
-                        <input type="number" class="team-score" name="score16" min="0" max="99" placeholder="0"
+                        <input id="final16Score16" type="number" class="team-score" name="score16" min="0" max="99" placeholder="0"
                             onchange="scoreFunction()" value=<%=score[0].score16 %>>
                     </p>
                     </p>
@@ -412,6 +412,7 @@
         if((score9!=score10) && (score11!=score12)){
             document.getElementById("QFScore5").setAttribute('type','number');
             document.getElementById("QFScore6").setAttribute('type','number');
+            document.getElementById("QFScore6").setAttribute('type','number');
         }else{
             document.getElementById("QFScore5").setAttribute('type','hidden');
             document.getElementById("QFScore6").setAttribute('type','hidden');
@@ -478,13 +479,21 @@
             teamsSF.push(team1);
             document.getElementById("team2QF").style.color="#ff6666";
             document.getElementById("team1QF").style.color="#7CFC00";
+            document.getElementById("final16Score1").readOnly=true;
+            document.getElementById("final16Score2").readOnly=true;
+            document.getElementById("final16Score3").readOnly=true;
+            document.getElementById("final16Score4").readOnly=true;
+
         }
         else if (score2 > score1) {
             document.getElementById("team1SF").innerHTML = team2;
             teamsSF.push(team2);
             document.getElementById("team1QF").style.color="#ff6666";
             document.getElementById("team2QF").style.color="#7CFC00";
-            
+            document.getElementById("final16Score1").readOnly=true;
+            document.getElementById("final16Score2").readOnly=true;
+            document.getElementById("final16Score3").readOnly=true;
+            document.getElementById("final16Score4").readOnly=true;            
         }
         else {
             document.getElementById("team1SF").innerHTML = "TBA";
@@ -500,12 +509,20 @@
             teamsSF[team3];
             document.getElementById("team4QF").style.color="#ff6666";
             document.getElementById("team3QF").style.color="#7CFC00";
+            document.getElementById("final16Score5").readOnly=true;
+            document.getElementById("final16Score6").readOnly=true;
+            document.getElementById("final16Score7").readOnly=true;
+            document.getElementById("final16Score8").readOnly=true;
         }
         else if (score4 > score3) {
             document.getElementById("team2SF").innerHTML = team4;
             teamsSF.push(team4);
             document.getElementById("team3QF").style.color="#ff6666";
             document.getElementById("team4QF").style.color="#7CFC00";
+            document.getElementById("final16Score5").readOnly=true;
+            document.getElementById("final16Score6").readOnly=true;
+            document.getElementById("final16Score7").readOnly=true;
+            document.getElementById("final16Score8").readOnly=true;
         }
         else {
             document.getElementById("team2SF").innerHTML = "TBA";
@@ -514,7 +531,7 @@
         }
         if((score1!=score2) && (score3!=score4)){
             document.getElementById("SFScore1").setAttribute('type','number');
-            document.getElementById("SFScore2").setAttribute('type','number');
+            document.getElementById("SFScore2").setAttribute('type','number');            
         }else{
             document.getElementById("SFScore1").setAttribute('type','hidden');
             document.getElementById("SFScore2").setAttribute('type','hidden');
@@ -528,12 +545,20 @@
             teamsSF.push(team5);
             document.getElementById("team6QF").style.color="#ff6666";
             document.getElementById("team5QF").style.color="#7CFC00";
+            document.getElementById("final16Score9").readOnly=true;
+            document.getElementById("final16Score10").readOnly=true;
+            document.getElementById("final16Score11").readOnly=true;
+            document.getElementById("final16Score12").readOnly=true;
         }
         else if (score6 > score5) {
             document.getElementById("team3SF").innerHTML = team6;
             teamsSF.push(team6);
             document.getElementById("team5QF").style.color="#ff6666";
             document.getElementById("team6QF").style.color="#7CFC00";
+            document.getElementById("final16Score9").readOnly=true;
+            document.getElementById("final16Score10").readOnly=true;
+            document.getElementById("final16Score11").readOnly=true;
+            document.getElementById("final16Score12").readOnly=true;
         }
         else {
             document.getElementById("team3SF").innerHTML = "TBA";
@@ -549,12 +574,20 @@
             teamsSF[3] = team7;
             document.getElementById("team8QF").style.color="#ff6666";
             document.getElementById("team7QF").style.color="#7CFC00";
+            document.getElementById("final16Score13").readOnly=true;
+            document.getElementById("final16Score14").readOnly=true;
+            document.getElementById("final16Score15").readOnly=true;
+            document.getElementById("final16Score16").readOnly=true;
         }
         else if (score8 > score7) {
             document.getElementById("team4SF").innerHTML = team8;
             teamsSF[3] = team8;
             document.getElementById("team7QF").style.color="#ff6666";
             document.getElementById("team8QF").style.color="#7CFC00";
+            document.getElementById("final16Score13").readOnly=true;
+            document.getElementById("final16Score14").readOnly=true;
+            document.getElementById("final16Score15").readOnly=true;
+            document.getElementById("final16Score16").readOnly=true;
         }
         else {
             document.getElementById("team4SF").innerHTML = "TBA";
@@ -580,12 +613,20 @@
             teamsFinal.push(team1);
             document.getElementById("team2SF").style.color="#ff6666";
             document.getElementById("team1SF").style.color="#7CFC00";
+            document.getElementById("QFScore1").readOnly=true;
+            document.getElementById("QFScore2").readOnly=true;
+            document.getElementById("QFScore3").readOnly=true;
+            document.getElementById("QFScore4").readOnly=true;
         }
         else if (score2 > score1) {
             document.getElementById("team1Final").innerHTML = team2;
             teamsFinal.push(team2);
             document.getElementById("team1SF").style.color="#ff6666";
             document.getElementById("team2SF").style.color="#7CFC00";
+            document.getElementById("QFScore1").readOnly=true;
+            document.getElementById("QFScore2").readOnly=true;
+            document.getElementById("QFScore3").readOnly=true;
+            document.getElementById("QFScore4").readOnly=true;
         }
         else {
             document.getElementById("team1Final").innerHTML = "TBA";
@@ -601,12 +642,20 @@
             teamsFinal.push(team3);
             document.getElementById("team4SF").style.color="#ff6666";
             document.getElementById("team3SF").style.color="#7CFC00";
+            document.getElementById("QFScore5").readOnly=true;
+            document.getElementById("QFScore6").readOnly=true;
+            document.getElementById("QFScore7").readOnly=true;
+            document.getElementById("QFScore8").readOnly=true;
         }
         else if (score4 > score3) {
             document.getElementById("team2Final").innerHTML = team4;
             teamsFinal.push(team4);
             document.getElementById("team3SF").style.color="#ff6666";
             document.getElementById("team4SF").style.color="#7CFC00";
+            document.getElementById("QFScore5").readOnly=true;
+            document.getElementById("QFScore6").readOnly=true;
+            document.getElementById("QFScore7").readOnly=true;
+            document.getElementById("QFScore8").readOnly=true;
         }
         else {
             document.getElementById("team2Final").innerHTML = "TBA";
@@ -633,12 +682,20 @@
             teamChamp.push(team1);
             document.getElementById("team2Final").style.color="#ff6666";
             document.getElementById("team1Final").style.color="#7CFC00";
+            document.getElementById("SFScore1").readOnly=true;
+            document.getElementById("SFScore2").readOnly=true;
+            document.getElementById("SFScore3").readOnly=true;
+            document.getElementById("SFScore4").readOnly=true;
         }
         else if (score2 > score1) {
             document.getElementById("teamWinner").innerHTML = team2;
             teamChamp.push(team2);
             document.getElementById("team1Final").style.color="#ff6666";
             document.getElementById("team2Final").style.color="#7CFC00";
+            document.getElementById("SFScore1").readOnly=true;
+            document.getElementById("SFScore2").readOnly=true;
+            document.getElementById("SFScore3").readOnly=true;
+            document.getElementById("SFScore4").readOnly=true;
         }
         else{
             document.getElementById("teamWinner").innerHTML = "TBA";
