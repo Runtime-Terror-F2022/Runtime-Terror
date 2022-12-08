@@ -262,10 +262,10 @@
     </form>
 </div>
 <script>
-   export  var teamsQF = [];
-   export var teamsSF = [];
-   export var teamsFinal = [];
-   export var teamChamp = [];
+   var teamsQF = [];
+   var teamsSF = [];
+   var teamsFinal = [];
+   var teamChamp = [];
     function scoreFunction() {
         teamsQF = [];
         var team1 = "<%= tournament.team1 %>";
@@ -480,10 +480,10 @@
             teamsSF.push(team1);
             document.getElementById("team2QF").style.color="#ff6666";
             document.getElementById("team1QF").style.color="#7CFC00";
-            document.getElementById("final16Score1").readOnly=true;
-            document.getElementById("final16Score2").readOnly=true;
-            document.getElementById("final16Score3").readOnly=true;
-            document.getElementById("final16Score4").readOnly=true;
+            // document.getElementById("final16Score1").readOnly=true;
+            // document.getElementById("final16Score2").readOnly=true;
+            // document.getElementById("final16Score3").readOnly=true;
+            // document.getElementById("final16Score4").readOnly=true;
 
         }
         else if (score2 > score1) {
@@ -491,10 +491,10 @@
             teamsSF.push(team2);
             document.getElementById("team1QF").style.color="#ff6666";
             document.getElementById("team2QF").style.color="#7CFC00";
-            document.getElementById("final16Score1").readOnly=true;
-            document.getElementById("final16Score2").readOnly=true;
-            document.getElementById("final16Score3").readOnly=true;
-            document.getElementById("final16Score4").readOnly=true;            
+            // document.getElementById("final16Score1").readOnly=true;
+            // document.getElementById("final16Score2").readOnly=true;
+            // document.getElementById("final16Score3").readOnly=true;
+            // document.getElementById("final16Score4").readOnly=true;            
         }
         else {
             document.getElementById("team1SF").innerHTML = "TBA";
@@ -510,20 +510,20 @@
             teamsSF[team3];
             document.getElementById("team4QF").style.color="#ff6666";
             document.getElementById("team3QF").style.color="#7CFC00";
-            document.getElementById("final16Score5").readOnly=true;
-            document.getElementById("final16Score6").readOnly=true;
-            document.getElementById("final16Score7").readOnly=true;
-            document.getElementById("final16Score8").readOnly=true;
+            // document.getElementById("final16Score5").readOnly=true;
+            // document.getElementById("final16Score6").readOnly=true;
+            // document.getElementById("final16Score7").readOnly=true;
+            // document.getElementById("final16Score8").readOnly=true;
         }
         else if (score4 > score3) {
             document.getElementById("team2SF").innerHTML = team4;
             teamsSF.push(team4);
             document.getElementById("team3QF").style.color="#ff6666";
             document.getElementById("team4QF").style.color="#7CFC00";
-            document.getElementById("final16Score5").readOnly=true;
-            document.getElementById("final16Score6").readOnly=true;
-            document.getElementById("final16Score7").readOnly=true;
-            document.getElementById("final16Score8").readOnly=true;
+            // document.getElementById("final16Score5").readOnly=true;
+            // document.getElementById("final16Score6").readOnly=true;
+            // document.getElementById("final16Score7").readOnly=true;
+            // document.getElementById("final16Score8").readOnly=true;
         }
         else {
             document.getElementById("team2SF").innerHTML = "TBA";
@@ -546,20 +546,20 @@
             teamsSF.push(team5);
             document.getElementById("team6QF").style.color="#ff6666";
             document.getElementById("team5QF").style.color="#7CFC00";
-            document.getElementById("final16Score9").readOnly=true;
-            document.getElementById("final16Score10").readOnly=true;
-            document.getElementById("final16Score11").readOnly=true;
-            document.getElementById("final16Score12").readOnly=true;
+            // document.getElementById("final16Score9").readOnly=true;
+            // document.getElementById("final16Score10").readOnly=true;
+            // document.getElementById("final16Score11").readOnly=true;
+            // document.getElementById("final16Score12").readOnly=true;
         }
         else if (score6 > score5) {
             document.getElementById("team3SF").innerHTML = team6;
             teamsSF.push(team6);
             document.getElementById("team5QF").style.color="#ff6666";
             document.getElementById("team6QF").style.color="#7CFC00";
-            document.getElementById("final16Score9").readOnly=true;
-            document.getElementById("final16Score10").readOnly=true;
-            document.getElementById("final16Score11").readOnly=true;
-            document.getElementById("final16Score12").readOnly=true;
+            // document.getElementById("final16Score9").readOnly=true;
+            // document.getElementById("final16Score10").readOnly=true;
+            // document.getElementById("final16Score11").readOnly=true;
+            // document.getElementById("final16Score12").readOnly=true;
         }
         else {
             document.getElementById("team3SF").innerHTML = "TBA";
@@ -575,20 +575,20 @@
             teamsSF[3] = team7;
             document.getElementById("team8QF").style.color="#ff6666";
             document.getElementById("team7QF").style.color="#7CFC00";
-            document.getElementById("final16Score13").readOnly=true;
-            document.getElementById("final16Score14").readOnly=true;
-            document.getElementById("final16Score15").readOnly=true;
-            document.getElementById("final16Score16").readOnly=true;
+            // document.getElementById("final16Score13").readOnly=true;
+            // document.getElementById("final16Score14").readOnly=true;
+            // document.getElementById("final16Score15").readOnly=true;
+            // document.getElementById("final16Score16").readOnly=true;
         }
         else if (score8 > score7) {
             document.getElementById("team4SF").innerHTML = team8;
             teamsSF[3] = team8;
             document.getElementById("team7QF").style.color="#ff6666";
             document.getElementById("team8QF").style.color="#7CFC00";
-            document.getElementById("final16Score13").readOnly=true;
-            document.getElementById("final16Score14").readOnly=true;
-            document.getElementById("final16Score15").readOnly=true;
-            document.getElementById("final16Score16").readOnly=true;
+            // document.getElementById("final16Score13").readOnly=true;
+            // document.getElementById("final16Score14").readOnly=true;
+            // document.getElementById("final16Score15").readOnly=true;
+            // document.getElementById("final16Score16").readOnly=true;
         }
         else {
             document.getElementById("team4SF").innerHTML = "TBA";
@@ -614,20 +614,20 @@
             teamsFinal.push(team1);
             document.getElementById("team2SF").style.color="#ff6666";
             document.getElementById("team1SF").style.color="#7CFC00";
-            document.getElementById("QFScore1").readOnly=true;
-            document.getElementById("QFScore2").readOnly=true;
-            document.getElementById("QFScore3").readOnly=true;
-            document.getElementById("QFScore4").readOnly=true;
+            // document.getElementById("QFScore1").readOnly=true;
+            // document.getElementById("QFScore2").readOnly=true;
+            // document.getElementById("QFScore3").readOnly=true;
+            // document.getElementById("QFScore4").readOnly=true;
         }
         else if (score2 > score1) {
             document.getElementById("team1Final").innerHTML = team2;
             teamsFinal.push(team2);
             document.getElementById("team1SF").style.color="#ff6666";
             document.getElementById("team2SF").style.color="#7CFC00";
-            document.getElementById("QFScore1").readOnly=true;
-            document.getElementById("QFScore2").readOnly=true;
-            document.getElementById("QFScore3").readOnly=true;
-            document.getElementById("QFScore4").readOnly=true;
+            // document.getElementById("QFScore1").readOnly=true;
+            // document.getElementById("QFScore2").readOnly=true;
+            // document.getElementById("QFScore3").readOnly=true;
+            // document.getElementById("QFScore4").readOnly=true;
         }
         else {
             document.getElementById("team1Final").innerHTML = "TBA";
@@ -643,20 +643,20 @@
             teamsFinal.push(team3);
             document.getElementById("team4SF").style.color="#ff6666";
             document.getElementById("team3SF").style.color="#7CFC00";
-            document.getElementById("QFScore5").readOnly=true;
-            document.getElementById("QFScore6").readOnly=true;
-            document.getElementById("QFScore7").readOnly=true;
-            document.getElementById("QFScore8").readOnly=true;
+            // document.getElementById("QFScore5").readOnly=true;
+            // document.getElementById("QFScore6").readOnly=true;
+            // document.getElementById("QFScore7").readOnly=true;
+            // document.getElementById("QFScore8").readOnly=true;
         }
         else if (score4 > score3) {
             document.getElementById("team2Final").innerHTML = team4;
             teamsFinal.push(team4);
             document.getElementById("team3SF").style.color="#ff6666";
             document.getElementById("team4SF").style.color="#7CFC00";
-            document.getElementById("QFScore5").readOnly=true;
-            document.getElementById("QFScore6").readOnly=true;
-            document.getElementById("QFScore7").readOnly=true;
-            document.getElementById("QFScore8").readOnly=true;
+            // document.getElementById("QFScore5").readOnly=true;
+            // document.getElementById("QFScore6").readOnly=true;
+            // document.getElementById("QFScore7").readOnly=true;
+            // document.getElementById("QFScore8").readOnly=true;
         }
         else {
             document.getElementById("team2Final").innerHTML = "TBA";
@@ -683,20 +683,20 @@
             teamChamp.push(team1);
             document.getElementById("team2Final").style.color="#ff6666";
             document.getElementById("team1Final").style.color="#7CFC00";
-            document.getElementById("SFScore1").readOnly=true;
-            document.getElementById("SFScore2").readOnly=true;
-            document.getElementById("SFScore3").readOnly=true;
-            document.getElementById("SFScore4").readOnly=true;
+            // document.getElementById("SFScore1").readOnly=true;
+            // document.getElementById("SFScore2").readOnly=true;
+            // document.getElementById("SFScore3").readOnly=true;
+            // document.getElementById("SFScore4").readOnly=true;
         }
         else if (score2 > score1) {
             document.getElementById("teamWinner").innerHTML = team2;
             teamChamp.push(team2);
             document.getElementById("team1Final").style.color="#ff6666";
             document.getElementById("team2Final").style.color="#7CFC00";
-            document.getElementById("SFScore1").readOnly=true;
-            document.getElementById("SFScore2").readOnly=true;
-            document.getElementById("SFScore3").readOnly=true;
-            document.getElementById("SFScore4").readOnly=true;
+            // document.getElementById("SFScore1").readOnly=true;
+            // document.getElementById("SFScore2").readOnly=true;
+            // document.getElementById("SFScore3").readOnly=true;
+            // document.getElementById("SFScore4").readOnly=true;
         }
         else{
             document.getElementById("teamWinner").innerHTML = "TBA";
