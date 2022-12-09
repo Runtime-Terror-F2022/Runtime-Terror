@@ -16,7 +16,7 @@ router.get('/forum-delete/:id', AuthGuard, ProcessForumDelete);
 
 // routers for processing and displaying the comments for the forums 
 router.get('/forum-comments/:id', AuthGuard, DisplayCommentsPage);
-router.post('/forum-comments/:id-add', AuthGuard, ProcessComments);
+router.post('/forum-comments/:id', AuthGuard, ProcessComments);
 router.get('/forum-comments-delete/:id', AuthGuard, ProcessCommentDelete);
 
 

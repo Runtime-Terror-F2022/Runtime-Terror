@@ -115,8 +115,8 @@ export function DisplayCommentsPage(req, res, next){
 export function ProcessComments(req, res, next){
     let id = req.params.id;
 
-    let comment = commentModel({forumID: id},{
-        
+    let comment = commentModel({
+        forumID: id,
         username: req.body.username,
         comment: req.body.comment
     });
@@ -133,7 +133,7 @@ export function ProcessComments(req, res, next){
 export function ProcessCommentDelete(req, res, next){
     let id = req.params.id;
     
-    commentModel.remove({_id: id}, (err) => {
+    commentModel.remove({forumID: id}, (err) => {
         if (err){
             console.error(err);
             res.end(err);
