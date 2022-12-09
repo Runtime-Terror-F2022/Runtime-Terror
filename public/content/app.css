@@ -182,12 +182,14 @@ p {
 }
 
 .bracket-card:first-of-type .card:before,
-.forum:before {
+.forum:before,
+.w-90:before {
     display: none;
 }
 
 .bracket-4 .card:after,
-.forum:after {
+.forum:after,
+.w-90:after {
     display: none;
 }
 

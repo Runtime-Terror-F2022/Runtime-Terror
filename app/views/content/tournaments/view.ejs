@@ -1,77 +1,77 @@
-<button onclick="displayResult()">View Result</button>
-<button onclick="displayBracket()">See Bracket</button>
+<button class="btn btn-dark btn-lg" onclick="displayResult()">View Result</button>
+<button class="btn btn-dark btn-lg" onclick="displayBracket()">See Bracket</button>
 <div class="container" id="resultDIV" style="display: none">
     <div class="row">
         <div>
             <h1>
-               Tournaments Result 
+                Tournaments Result
             </h1>
-                <div class="card w-90">
-                 <div class="card-body">
-                     <table class="table">
+            <div class="card w-90">
+                <div class="card-body">
+                    <table class="table">
                         <thead class="thead-dark">
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Final 16</th>
-                            <th scope="col">Quarter Final</th>
-                            <th scope="col">Semi Final</th>
-                            <th scope="col">Final</th>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Final 16</th>
+                                <th scope="col">Quarter Final</th>
+                                <th scope="col">Semi Final</th>
+                                <th scope="col">Final</th>
 
-                          </tr>
+                            </tr>
                         </thead>
                         <tbody id="tournamentResult">
-                            
-                          <tr>
-                            <th scope="row">1</th>
-                           
-                            <td id="R16Winner1">                      </td>
-                            <td id="QFWinner1">                       </td>
-                            <td id="SFWinner1">                       </td>
-                            <td id="FinalWinner">                       </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td id="R16Winner2">                       </td>
-                            <td id="QFWinner2">                       </td>
-                            <td id="SFWinner2">                       </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td id="R16Winner3">                       </td>
-                            <td id="QFWinner3">                       </td>
-                            
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td id="R16Winner4">                       </td>
-                            <td id="QFWinner4">                       </td>
-                           
-                          </tr>
-                          <tr>
-                            <th scope="row">5</th>
-                            <td id="R16Winner5">                       </td>
-                            
-                          </tr>
-                          <tr>
-                            <th scope="row">6</th>
-                            <td id="R16Winner6">                       </td>
-                            
-                          </tr>
-                          <tr>
-                            <th scope="row">7</th>
-                            <td id="R16Winner7">                       </td>
-                            
-                          </tr>
-                          <tr>
-                            <th scope="row">8</th>
-                            <td id="R16Winner8">                       </td>
-                          </tr>
+
+                            <tr>
+                                <th scope="row">1</th>
+
+                                <td id="R16Winner1"> </td>
+                                <td id="QFWinner1"> </td>
+                                <td id="SFWinner1"> </td>
+                                <td id="FinalWinner"> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td id="R16Winner2"> </td>
+                                <td id="QFWinner2"> </td>
+                                <td id="SFWinner2"> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td id="R16Winner3"> </td>
+                                <td id="QFWinner3"> </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td id="R16Winner4"> </td>
+                                <td id="QFWinner4"> </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td id="R16Winner5"> </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td id="R16Winner6"> </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td id="R16Winner7"> </td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td id="R16Winner8"> </td>
+                            </tr>
                         </tbody>
-                      </table>
-                      
-                      
-                 </div>
-                
+                    </table>
+
+
+                </div>
+
             </div>
         </div>
     </div>
@@ -80,7 +80,7 @@
     <form class="form" method="POST">
         <div class="roundHeaders">
             <h4 class="round-header">Round 16
-            
+
             </h4>
             <h4 class="round-header">Quarter-Finals
             </h4>
@@ -93,143 +93,143 @@
         <div class="t-brackets">
 
             <ul class="bracket-card bracket-1">
-                <% if(profileType == "Owner") { %> 
-                <button class="btn btn-light" type="submit">
-                    <i class="fas fa-edit"></i> Submit Result</button>
-                <% } %>
-                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                    <p class="teamId" id="final16Game1Team1">
-                        <%= tournament.team1 %>
-                    </p>
-                    <p class="score">
-                        <input id="final16Score1" type="number" class="team-score" name="score1" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value= <%=score[0].score1 %>>
-                        -
-                        <input id="final16Score2" type="number" class="team-score" name="score2" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score2 %>>
-                    </p>
-                    <p class="teamId" id="final16Game1Team2">
-                        <%= tournament.team2 %>
-                    </p>
-                </li>
-                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                    <p class="teamId" id="final16Game2Team1">
-                        <%= tournament.team3 %>
-                    </p>
-                    <p class="score">
-                    <p class="score">
-                        <input id="final16Score3" type="number" class="team-score" name="score3" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score3 %>>
-                        -
-                        <input id="final16Score4" type="number" class="team-score" name="score4" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score4 %>>
-                    </p>
-                    </p>
-                    <p class="teamId" id="final16Game2Team2">
-                        <%= tournament.team4 %>
-                    </p>
-                </li>
-                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                    <p class="teamId" id="final16Game3Team1">
-                        <%= tournament.team5 %>
-                    </p>
-                    <p class="score">
-                    <p class="score">
-                        <input id="final16Score5" type="number" class="team-score" name="score5" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score5 %>>
-                        -
-                        <input id="final16Score6" type="number" class="team-score" name="score6" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score6 %>>
-                    </p>
-                    </p>
-                    <p class="teamId" id="final16Game3Team2">
-                        <%= tournament.team6 %>
-                    </p>
-                </li>
-                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                    <p class="teamId" id="final16Game4Team1">
-                        <%= tournament.team7 %>
-                    </p>
-                    <p class="score">
-                    <p class="score">
-                        <input id="final16Score7" type="number" class="team-score" name="score7" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score7 %>>
-                        -
-                        <input id="final16Score8" type="number" class="team-score" name="score8" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score8 %>>
-                    </p>
-                    </p>
-                    <p class="teamId" id="final16Game4Team2">
-                        <%= tournament.team8 %>
-                    </p>
-                </li>
-                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                    <p class="teamId" id="final16Game5Team1">
-                        <%= tournament.team9 %>
-                    </p>
-                    <p class="score">
-                    <p class="score">
-                        <input id="final16Score9" type="number" class="team-score" name="score9" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score9 %>>
-                        -
-                        <input id="final16Score10" type="number" class="team-score" name="score10" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score10 %>>
-                    </p>
-                    </p>
-                    <p class="teamId" id="final16Game5Team2">
-                        <%= tournament.team10 %>
-                    </p>
-                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                    <p class="teamId" id="final16Game6Team1">
-                        <%= tournament.team11 %>
-                    </p>
-                    <p class="score">
-                    <p class="score">
-                        <input id="final16Score11" type="number" class="team-score" name="score11" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score11 %>>
-                        -
-                        <input id="final16Score12" type="number" class="team-score" name="score12" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score12 %>>
-                    </p>
-                    </p>
-                    <p class="teamId" id="final16Game6Team2">
-                        <%= tournament.team12 %>
-                    </p>
-                </li>
-                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                    <p class="teamId" id="final16Game7Team1">
-                        <%= tournament.team13 %>
-                    </p>
-                    <p class="score">
-                    <p class="score">
-                        <input id="final16Score13" type="number" class="team-score" name="score13" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score13 %>>
-                        -
-                        <input id="final16Score14" type="number" class="team-score" name="score14" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score14 %>>
-                    </p>
-                    </p>
-                    <p class="teamId" id="final16Game7Team2">
-                        <%= tournament.team14 %>
-                    </p>
-                </li>
-                <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
-                    <p class="teamId" id="final16Game8Team1">
-                        <%= tournament.team15 %>
-                    </p>
-                    <p class="score">
-                    <p class="score">
-                        <input id="final16Score15" type="number" class="team-score" name="score15" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score15 %>>
-                        -
-                        <input id="final16Score16" type="number" class="team-score" name="score16" min="0" max="99" placeholder="0"
-                            onchange="scoreFunction()" value=<%=score[0].score16 %>>
-                    </p>
-                    </p>
-                    <p class="teamId" id="final16Game8Team2">
-                        <%= tournament.team16 %>
-                    </p>
-                </li>
+                <% if(profileType=="Owner" ) { %>
+                    <button class="btn btn-light" type="submit">
+                        <i class="fas fa-edit"></i> Submit Result</button>
+                    <% } %>
+                        <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                            <p class="teamId" id="final16Game1Team1">
+                                <%= tournament.team1 %>
+                            </p>
+                            <p class="score">
+                                <input id="final16Score1" type="number" class="team-score" name="score1" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score1 %>>
+                                -
+                                <input id="final16Score2" type="number" class="team-score" name="score2" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score2 %>>
+                            </p>
+                            <p class="teamId" id="final16Game1Team2">
+                                <%= tournament.team2 %>
+                            </p>
+                        </li>
+                        <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                            <p class="teamId" id="final16Game2Team1">
+                                <%= tournament.team3 %>
+                            </p>
+                            <p class="score">
+                            <p class="score">
+                                <input id="final16Score3" type="number" class="team-score" name="score3" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score3 %>>
+                                -
+                                <input id="final16Score4" type="number" class="team-score" name="score4" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score4 %>>
+                            </p>
+                            </p>
+                            <p class="teamId" id="final16Game2Team2">
+                                <%= tournament.team4 %>
+                            </p>
+                        </li>
+                        <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                            <p class="teamId" id="final16Game3Team1">
+                                <%= tournament.team5 %>
+                            </p>
+                            <p class="score">
+                            <p class="score">
+                                <input id="final16Score5" type="number" class="team-score" name="score5" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score5 %>>
+                                -
+                                <input id="final16Score6" type="number" class="team-score" name="score6" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score6 %>>
+                            </p>
+                            </p>
+                            <p class="teamId" id="final16Game3Team2">
+                                <%= tournament.team6 %>
+                            </p>
+                        </li>
+                        <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                            <p class="teamId" id="final16Game4Team1">
+                                <%= tournament.team7 %>
+                            </p>
+                            <p class="score">
+                            <p class="score">
+                                <input id="final16Score7" type="number" class="team-score" name="score7" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score7 %>>
+                                -
+                                <input id="final16Score8" type="number" class="team-score" name="score8" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score8 %>>
+                            </p>
+                            </p>
+                            <p class="teamId" id="final16Game4Team2">
+                                <%= tournament.team8 %>
+                            </p>
+                        </li>
+                        <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                            <p class="teamId" id="final16Game5Team1">
+                                <%= tournament.team9 %>
+                            </p>
+                            <p class="score">
+                            <p class="score">
+                                <input id="final16Score9" type="number" class="team-score" name="score9" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score9 %>>
+                                -
+                                <input id="final16Score10" type="number" class="team-score" name="score10" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score10 %>>
+                            </p>
+                            </p>
+                            <p class="teamId" id="final16Game5Team2">
+                                <%= tournament.team10 %>
+                            </p>
+                        <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                            <p class="teamId" id="final16Game6Team1">
+                                <%= tournament.team11 %>
+                            </p>
+                            <p class="score">
+                            <p class="score">
+                                <input id="final16Score11" type="number" class="team-score" name="score11" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score11 %>>
+                                -
+                                <input id="final16Score12" type="number" class="team-score" name="score12" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score12 %>>
+                            </p>
+                            </p>
+                            <p class="teamId" id="final16Game6Team2">
+                                <%= tournament.team12 %>
+                            </p>
+                        </li>
+                        <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                            <p class="teamId" id="final16Game7Team1">
+                                <%= tournament.team13 %>
+                            </p>
+                            <p class="score">
+                            <p class="score">
+                                <input id="final16Score13" type="number" class="team-score" name="score13" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score13 %>>
+                                -
+                                <input id="final16Score14" type="number" class="team-score" name="score14" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score14 %>>
+                            </p>
+                            </p>
+                            <p class="teamId" id="final16Game7Team2">
+                                <%= tournament.team14 %>
+                            </p>
+                        </li>
+                        <li class="card text-bg-dark mb-3" style="max-width: 18rem;">
+                            <p class="teamId" id="final16Game8Team1">
+                                <%= tournament.team15 %>
+                            </p>
+                            <p class="score">
+                            <p class="score">
+                                <input id="final16Score15" type="number" class="team-score" name="score15" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score15 %>>
+                                -
+                                <input id="final16Score16" type="number" class="team-score" name="score16" min="0"
+                                    max="99" placeholder="0" onchange="scoreFunction()" value=<%=score[0].score16 %>>
+                            </p>
+                            </p>
+                            <p class="teamId" id="final16Game8Team2">
+                                <%= tournament.team16 %>
+                            </p>
+                        </li>
 
             </ul>
             <ul class="bracket-card bracket-2">
@@ -237,11 +237,11 @@
                     <p class="teamId" id="team1QF">TBA</p>
                     <p class="score">
                     <p class="score">
-                        <input type="hidden" id="QFScore1" class="team-score" name="scoreQF1" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionQF()" value=<%=score[0].score17 %>>
+                        <input type="hidden" id="QFScore1" class="team-score" name="scoreQF1" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionQF()" value=<%=score[0].score17 %>>
                         -
-                        <input type="hidden" id="QFScore2" class="team-score" name="scoreQF2" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionQF()" value=<%=score[0].score18 %>>
+                        <input type="hidden" id="QFScore2" class="team-score" name="scoreQF2" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionQF()" value=<%=score[0].score18 %>>
                     </p>
                     </p>
                     <p class="teamId" id="team2QF">TBA</p>
@@ -250,11 +250,11 @@
                     <p class="teamId" id="team3QF">TBA</p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" id="QFScore3" class="team-score" name="scoreQF3" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionQF()" value=<%=score[0].score19 %>>
+                        <input type="number" id="QFScore3" class="team-score" name="scoreQF3" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionQF()" value=<%=score[0].score19 %>>
                         -
-                        <input type="number" id="QFScore4" class="team-score" name="scoreQF4" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionQF()" value=<%=score[0].score20 %>>
+                        <input type="number" id="QFScore4" class="team-score" name="scoreQF4" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionQF()" value=<%=score[0].score20 %>>
                     </p>
                     </p>
                     <p class="teamId" id="team4QF">TBA</p>
@@ -263,11 +263,11 @@
                     <p class="teamId" id="team5QF">TBA</p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" id="QFScore5" class="team-score" name="scoreQF5" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionQF()" value=<%=score[0].score21 %>>
+                        <input type="number" id="QFScore5" class="team-score" name="scoreQF5" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionQF()" value=<%=score[0].score21 %>>
                         -
-                        <input type="number" id="QFScore6" class="team-score" name="scoreQF6" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionQF()" value=<%=score[0].score22 %> %>>
+                        <input type="number" id="QFScore6" class="team-score" name="scoreQF6" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionQF()" value=<%=score[0].score22 %> %>>
                     </p>
                     </p>
                     <p class="teamId" id="team6QF">TBA</p>
@@ -276,11 +276,11 @@
                     <p class="teamId" id="team7QF">TBA</p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" id="QFScore7" class="team-score" name="scoreQF7" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionQF()" value=<%=score[0].score23 %>>
+                        <input type="number" id="QFScore7" class="team-score" name="scoreQF7" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionQF()" value=<%=score[0].score23 %>>
                         -
-                        <input type="number" id="QFScore8" class="team-score" name="scoreQF8" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionQF()" value=<%=score[0].score24 %>>
+                        <input type="number" id="QFScore8" class="team-score" name="scoreQF8" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionQF()" value=<%=score[0].score24 %>>
                     </p>
                     </p>
                     <p class="teamId" id="team8QF">TBA</p>
@@ -291,11 +291,11 @@
                     <p class="teamId" id="team1SF">TBA</p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" id="SFScore1" class="team-score" name="scoreSF1" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionSF()" value=<%=score[0].score25 %>>
+                        <input type="number" id="SFScore1" class="team-score" name="scoreSF1" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionSF()" value=<%=score[0].score25 %>>
                         -
-                        <input type="number" id="SFScore2" class="team-score" name="scoreSF2" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionSF()" value=<%=score[0].score26 %>>
+                        <input type="number" id="SFScore2" class="team-score" name="scoreSF2" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionSF()" value=<%=score[0].score26 %>>
                     </p>
                     </p>
                     <p class="teamId" id="team2SF">TBA</p>
@@ -304,11 +304,11 @@
                     <p class="teamId" id="team3SF">TBA</p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" id="SFScore3" class="team-score" name="scoreSF3" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionSF()" value=<%=score[0].score27 %>>
+                        <input type="number" id="SFScore3" class="team-score" name="scoreSF3" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionSF()" value=<%=score[0].score27 %>>
                         -
-                        <input type="number" id="SFScore4" class="team-score" name="scoreSF4" min="0" max="99" placeholder="0"
-                            onchange="scoreFunctionSF()" value=<%=score[0].score28 %>>
+                        <input type="number" id="SFScore4" class="team-score" name="scoreSF4" min="0" max="99"
+                            placeholder="0" onchange="scoreFunctionSF()" value=<%=score[0].score28 %>>
                     </p>
                     </p>
                     <p class="teamId" id="team4SF">TBA</p>
@@ -319,11 +319,11 @@
                     <p class="teamId" id="team1Final">TBA</p>
                     <p class="score">
                     <p class="score">
-                        <input type="number" id="FScore1" class="team-score" name="scoreFinal1" min="0" max="99" placeholder="0"
-                            onchange="scoreFuntionFinals()" value=<%=score[0].score29 %>>
+                        <input type="number" id="FScore1" class="team-score" name="scoreFinal1" min="0" max="99"
+                            placeholder="0" onchange="scoreFuntionFinals()" value=<%=score[0].score29 %>>
                         -
-                        <input type="number" id="FScore2" class="team-score" name="scoreFinal2" min="0" max="99" placeholder="0"
-                            onchange="scoreFuntionFinals()" value=<%=score[0].score30 %>>
+                        <input type="number" id="FScore2" class="team-score" name="scoreFinal2" min="0" max="99"
+                            placeholder="0" onchange="scoreFuntionFinals()" value=<%=score[0].score30 %>>
                     </p>
                     </p>
                     <p class="teamId" id="team2Final">TBA</p>
@@ -333,17 +333,17 @@
                 <li class="card text-white bg-warning mb-3" style="max-width: 18rem;">
                     <p class="teamId" id="teamWinner">TBA</p>
                     <!-- <a href = "/result">View Result</a> -->
-                    
+
                 </li>
             </ul>
         </div>
     </form>
 </div>
 <script>
-   var teamsQF = [];
-   var teamsSF = [];
-   var teamsFinal = [];
-   var teamChamp = [];
+    var teamsQF = [];
+    var teamsSF = [];
+    var teamsFinal = [];
+    var teamChamp = [];
     function scoreFunction() {
         teamsQF = [];
         var team1 = "<%= tournament.team1 %>";
@@ -353,20 +353,20 @@
         if (score1 > score2) {
             document.getElementById("team1QF").innerHTML = team1;
             teamsQF[0] = team1;
-            document.getElementById("final16Game1Team2").style.color="#ff6666";
-            document.getElementById("final16Game1Team1").style.color="#7CFC00";
+            document.getElementById("final16Game1Team2").style.color = "#ff6666";
+            document.getElementById("final16Game1Team1").style.color = "#7CFC00";
             //document.getElementById("QFScore1").setAttribute('type','number');
         }
         else if (score2 > score1) {
             document.getElementById("team1QF").innerHTML = team2;
             teamsQF[0] = team2;
-            document.getElementById("final16Game1Team1").style.color="#ff6666";
-            document.getElementById("final16Game1Team2").style.color="#7CFC00";
+            document.getElementById("final16Game1Team1").style.color = "#ff6666";
+            document.getElementById("final16Game1Team2").style.color = "#7CFC00";
         }
         else {
             document.getElementById("team1QF").innerHTML = "TBA";
-            document.getElementById("final16Game1Team2").style.color="#ffffff";
-            document.getElementById("final16Game1Team1").style.color="#ffffff";
+            document.getElementById("final16Game1Team2").style.color = "#ffffff";
+            document.getElementById("final16Game1Team1").style.color = "#ffffff";
         }
         var team3 = "<%= tournament.team3 %>";
         var team4 = "<%= tournament.team4 %>";
@@ -375,27 +375,27 @@
         if (score3 > score4) {
             document.getElementById("team2QF").innerHTML = team3;
             teamsQF[1] = team3;
-            document.getElementById("final16Game2Team2").style.color="#ff6666";
-            document.getElementById("final16Game2Team1").style.color="#7CFC00";
+            document.getElementById("final16Game2Team2").style.color = "#ff6666";
+            document.getElementById("final16Game2Team1").style.color = "#7CFC00";
 
         }
         else if (score4 > score3) {
             document.getElementById("team2QF").innerHTML = team4;
             teamsQF[1] = team4;
-            document.getElementById("final16Game2Team1").style.color="#ff6666";
-            document.getElementById("final16Game2Team2").style.color="#7CFC00";
+            document.getElementById("final16Game2Team1").style.color = "#ff6666";
+            document.getElementById("final16Game2Team2").style.color = "#7CFC00";
         }
         else {
             document.getElementById("team2QF").innerHTML = "TBA";
-            document.getElementById("final16Game2Team2").style.color="#ffffff";
-            document.getElementById("final16Game2Team1").style.color="#ffffff";
+            document.getElementById("final16Game2Team2").style.color = "#ffffff";
+            document.getElementById("final16Game2Team1").style.color = "#ffffff";
         }
-        if((score1!=score2) && (score3!=score4)){
-            document.getElementById("QFScore1").setAttribute('type','number');
-            document.getElementById("QFScore2").setAttribute('type','number');
-        }else{
-            document.getElementById("QFScore1").setAttribute('type','hidden');
-            document.getElementById("QFScore2").setAttribute('type','hidden');
+        if ((score1 != score2) && (score3 != score4)) {
+            document.getElementById("QFScore1").setAttribute('type', 'number');
+            document.getElementById("QFScore2").setAttribute('type', 'number');
+        } else {
+            document.getElementById("QFScore1").setAttribute('type', 'hidden');
+            document.getElementById("QFScore2").setAttribute('type', 'hidden');
         }
         var team5 = "<%= tournament.team5 %>";
         var team6 = "<%= tournament.team6 %>";
@@ -404,18 +404,18 @@
         if (score5 > score6) {
             document.getElementById("team3QF").innerHTML = team5;
             teamsQF[2] = team5;
-            document.getElementById("final16Game3Team2").style.color="#ff6666";
-            document.getElementById("final16Game3Team1").style.color="#7CFC00";
+            document.getElementById("final16Game3Team2").style.color = "#ff6666";
+            document.getElementById("final16Game3Team1").style.color = "#7CFC00";
         }
         else if (score6 > score5) {
             document.getElementById("team3QF").innerHTML = team6;
             teamsQF[2] = team6;
-            document.getElementById("final16Game3Team1").style.color="#ff6666";
-            document.getElementById("final16Game3Team2").style.color="#7CFC00";
+            document.getElementById("final16Game3Team1").style.color = "#ff6666";
+            document.getElementById("final16Game3Team2").style.color = "#7CFC00";
         }
         else {
-            document.getElementById("final16Game3Team2").style.color="#ffffff";
-            document.getElementById("final16Game3Team1").style.color="#ffffff";
+            document.getElementById("final16Game3Team2").style.color = "#ffffff";
+            document.getElementById("final16Game3Team1").style.color = "#ffffff";
             document.getElementById("team3QF").innerHTML = "TBA";
         }
         var team7 = "<%= tournament.team7 %>";
@@ -425,26 +425,26 @@
         if (score7 > score8) {
             document.getElementById("team4QF").innerHTML = team7;
             teamsQF[3] = team7;
-            document.getElementById("final16Game4Team2").style.color="#ff6666";
-            document.getElementById("final16Game4Team1").style.color="#7CFC00";
+            document.getElementById("final16Game4Team2").style.color = "#ff6666";
+            document.getElementById("final16Game4Team1").style.color = "#7CFC00";
         }
         else if (score8 > score7) {
             document.getElementById("team4QF").innerHTML = team8;
-            document.getElementById("final16Game4Team1").style.color="#ff6666";
-            document.getElementById("final16Game4Team2").style.color="#7CFC00";
+            document.getElementById("final16Game4Team1").style.color = "#ff6666";
+            document.getElementById("final16Game4Team2").style.color = "#7CFC00";
             teamsQF[3] = team8;
         }
         else {
             document.getElementById("team4QF").innerHTML = "TBA";
-            document.getElementById("final16Game4Team2").style.color="#ffffff";
-            document.getElementById("final16Game4Team1").style.color="#ffffff";
+            document.getElementById("final16Game4Team2").style.color = "#ffffff";
+            document.getElementById("final16Game4Team1").style.color = "#ffffff";
         }
-        if((score5!=score6) && (score7!=score8)){
-            document.getElementById("QFScore3").setAttribute('type','number');
-            document.getElementById("QFScore4").setAttribute('type','number');
-        }else{
-            document.getElementById("QFScore3").setAttribute('type','hidden');
-            document.getElementById("QFScore4").setAttribute('type','hidden');
+        if ((score5 != score6) && (score7 != score8)) {
+            document.getElementById("QFScore3").setAttribute('type', 'number');
+            document.getElementById("QFScore4").setAttribute('type', 'number');
+        } else {
+            document.getElementById("QFScore3").setAttribute('type', 'hidden');
+            document.getElementById("QFScore4").setAttribute('type', 'hidden');
         }
         var team9 = "<%= tournament.team9 %>";
         var team10 = "<%= tournament.team10 %>";
@@ -453,19 +453,19 @@
         if (score9 > score10) {
             document.getElementById("team5QF").innerHTML = team9;
             teamsQF[4] = team9;
-            document.getElementById("final16Game5Team2").style.color="#ff6666";
-            document.getElementById("final16Game5Team1").style.color="#7CFC00";
+            document.getElementById("final16Game5Team2").style.color = "#ff6666";
+            document.getElementById("final16Game5Team1").style.color = "#7CFC00";
         }
         else if (score10 > score9) {
             document.getElementById("team5QF").innerHTML = team10;
             teamsQF[4] = team10;
-            document.getElementById("final16Game5Team1").style.color="#ff6666";
-            document.getElementById("final16Game5Team2").style.color="#7CFC00";
+            document.getElementById("final16Game5Team1").style.color = "#ff6666";
+            document.getElementById("final16Game5Team2").style.color = "#7CFC00";
         }
         else {
             document.getElementById("team5QF").innerHTML = "TBA";
-            document.getElementById("final16Game5Team2").style.color="#ffffff";
-            document.getElementById("final16Game5Team1").style.color="#ffffff";
+            document.getElementById("final16Game5Team2").style.color = "#ffffff";
+            document.getElementById("final16Game5Team1").style.color = "#ffffff";
         }
         var team11 = "<%= tournament.team11 %>";
         var team12 = "<%= tournament.team12 %>";
@@ -474,27 +474,27 @@
         if (score11 > score12) {
             document.getElementById("team6QF").innerHTML = team11;
             teamsQF[5] = team11;
-            document.getElementById("final16Game6Team2").style.color="#ff6666";
-            document.getElementById("final16Game6Team1").style.color="#7CFC00";
+            document.getElementById("final16Game6Team2").style.color = "#ff6666";
+            document.getElementById("final16Game6Team1").style.color = "#7CFC00";
         }
         else if (score12 > score11) {
             document.getElementById("team6QF").innerHTML = team12;
-            document.getElementById("final16Game6Team1").style.color="#ff6666";
-            document.getElementById("final16Game6Team2").style.color="#7CFC00";
+            document.getElementById("final16Game6Team1").style.color = "#ff6666";
+            document.getElementById("final16Game6Team2").style.color = "#7CFC00";
             teamsQF[5] = team12;
         }
         else {
             document.getElementById("team6QF").innerHTML = "TBA";
-            document.getElementById("final16Game6Team2").style.color="#ffffff";
-            document.getElementById("final16Game6Team1").style.color="#ffffff";
+            document.getElementById("final16Game6Team2").style.color = "#ffffff";
+            document.getElementById("final16Game6Team1").style.color = "#ffffff";
         }
-        if((score9!=score10) && (score11!=score12)){
-            document.getElementById("QFScore5").setAttribute('type','number');
-            document.getElementById("QFScore6").setAttribute('type','number');
-            document.getElementById("QFScore6").setAttribute('type','number');
-        }else{
-            document.getElementById("QFScore5").setAttribute('type','hidden');
-            document.getElementById("QFScore6").setAttribute('type','hidden');
+        if ((score9 != score10) && (score11 != score12)) {
+            document.getElementById("QFScore5").setAttribute('type', 'number');
+            document.getElementById("QFScore6").setAttribute('type', 'number');
+            document.getElementById("QFScore6").setAttribute('type', 'number');
+        } else {
+            document.getElementById("QFScore5").setAttribute('type', 'hidden');
+            document.getElementById("QFScore6").setAttribute('type', 'hidden');
         }
         var team13 = "<%= tournament.team13 %>";
         var team14 = "<%= tournament.team14 %>";
@@ -503,19 +503,19 @@
         if (score13 > score14) {
             document.getElementById("team7QF").innerHTML = team13;
             teamsQF[6] = team13;
-            document.getElementById("final16Game7Team2").style.color="#ff6666";
-            document.getElementById("final16Game7Team1").style.color="#7CFC00";
+            document.getElementById("final16Game7Team2").style.color = "#ff6666";
+            document.getElementById("final16Game7Team1").style.color = "#7CFC00";
         }
         else if (score14 > score13) {
             document.getElementById("team7QF").innerHTML = team14;
             teamsQF[6] = team14;
-            document.getElementById("final16Game7Team1").style.color="#ff6666";
-            document.getElementById("final16Game7Team2").style.color="#7CFC00";
+            document.getElementById("final16Game7Team1").style.color = "#ff6666";
+            document.getElementById("final16Game7Team2").style.color = "#7CFC00";
         }
         else {
             document.getElementById("team7QF").innerHTML = "TBA";
-            document.getElementById("final16Game7Team2").style.color="#ffffff";
-            document.getElementById("final16Game7Team1").style.color="#ffffff";
+            document.getElementById("final16Game7Team2").style.color = "#ffffff";
+            document.getElementById("final16Game7Team1").style.color = "#ffffff";
         }
         var team15 = "<%= tournament.team15 %>";
         var team16 = "<%= tournament.team16 %>";
@@ -524,42 +524,42 @@
         if (score15 > score16) {
             document.getElementById("team8QF").innerHTML = team15;
             teamsQF[7] = team15;
-            document.getElementById("final16Game8Team2").style.color="#ff6666";
-            document.getElementById("final16Game8Team1").style.color="#7CFC00";
+            document.getElementById("final16Game8Team2").style.color = "#ff6666";
+            document.getElementById("final16Game8Team1").style.color = "#7CFC00";
         }
         else if (score16 > score15) {
             document.getElementById("team8QF").innerHTML = team16;
             teamsQF[7] = team16;
-            document.getElementById("final16Game8Team1").style.color="#ff6666";
-            document.getElementById("final16Game8Team2").style.color="#7CFC00";
+            document.getElementById("final16Game8Team1").style.color = "#ff6666";
+            document.getElementById("final16Game8Team2").style.color = "#7CFC00";
         }
         else {
             document.getElementById("team8QF").innerHTML = "TBA";
-            document.getElementById("final16Game8Team2").style.color="#ffffff";
-            document.getElementById("final16Game8Team1").style.color="#ffffff";
+            document.getElementById("final16Game8Team2").style.color = "#ffffff";
+            document.getElementById("final16Game8Team1").style.color = "#ffffff";
         }
-        if((score13!=score14) && (score15!=score16)){
-            document.getElementById("QFScore7").setAttribute('type','number');
-            document.getElementById("QFScore8").setAttribute('type','number');
-        }else{
-            document.getElementById("QFScore7").setAttribute('type','hidden');
-            document.getElementById("QFScore8").setAttribute('type','hidden');
+        if ((score13 != score14) && (score15 != score16)) {
+            document.getElementById("QFScore7").setAttribute('type', 'number');
+            document.getElementById("QFScore8").setAttribute('type', 'number');
+        } else {
+            document.getElementById("QFScore7").setAttribute('type', 'hidden');
+            document.getElementById("QFScore8").setAttribute('type', 'hidden');
         }
-        let result1=team1+" "+score1+":"+score2+" "+team2;
+        let result1 = team1 + " " + score1 + ":" + score2 + " " + team2;
         document.getElementById("R16Winner1").innerHTML = result1;
-        let result2=team3+" "+score3+":"+score4+" "+team4;
+        let result2 = team3 + " " + score3 + ":" + score4 + " " + team4;
         document.getElementById("R16Winner2").innerHTML = result2;
-        let result3=team5+" "+score5+":"+score6+" "+team6;
+        let result3 = team5 + " " + score5 + ":" + score6 + " " + team6;
         document.getElementById("R16Winner3").innerHTML = result3;
-        let result4=team7+" "+score7+":"+score8+" "+team8;
+        let result4 = team7 + " " + score7 + ":" + score8 + " " + team8;
         document.getElementById("R16Winner4").innerHTML = result4;
-        let result5=team9+" "+score9+":"+score10+" "+team10;
+        let result5 = team9 + " " + score9 + ":" + score10 + " " + team10;
         document.getElementById("R16Winner5").innerHTML = result5;
-        let result6=team11+" "+score11+":"+score12+" "+team12;
+        let result6 = team11 + " " + score11 + ":" + score12 + " " + team12;
         document.getElementById("R16Winner6").innerHTML = result6;
-        let result7=team13+" "+score13+":"+score14+" "+team14;
+        let result7 = team13 + " " + score13 + ":" + score14 + " " + team14;
         document.getElementById("R16Winner7").innerHTML = result7;
-        let result8=team15+" "+score15+":"+score16+" "+team16;
+        let result8 = team15 + " " + score15 + ":" + score16 + " " + team16;
         document.getElementById("R16Winner8").innerHTML = result8;
     }
     function scoreFunctionQF() {
@@ -571,8 +571,8 @@
         if (score1 > score2) {
             document.getElementById("team1SF").innerHTML = team1;
             teamsSF.push(team1);
-            document.getElementById("team2QF").style.color="#ff6666";
-            document.getElementById("team1QF").style.color="#7CFC00";
+            document.getElementById("team2QF").style.color = "#ff6666";
+            document.getElementById("team1QF").style.color = "#7CFC00";
             // document.getElementById("final16Score1").readOnly=true;
             // document.getElementById("final16Score2").readOnly=true;
             // document.getElementById("final16Score3").readOnly=true;
@@ -582,8 +582,8 @@
         else if (score2 > score1) {
             document.getElementById("team1SF").innerHTML = team2;
             teamsSF.push(team2);
-            document.getElementById("team1QF").style.color="#ff6666";
-            document.getElementById("team2QF").style.color="#7CFC00";
+            document.getElementById("team1QF").style.color = "#ff6666";
+            document.getElementById("team2QF").style.color = "#7CFC00";
             // document.getElementById("final16Score1").readOnly=true;
             // document.getElementById("final16Score2").readOnly=true;
             // document.getElementById("final16Score3").readOnly=true;
@@ -591,8 +591,8 @@
         }
         else {
             document.getElementById("team1SF").innerHTML = "TBA";
-            document.getElementById("team1QF").style.color="#ffffff";
-            document.getElementById("team2QF").style.color="#ffffff";
+            document.getElementById("team1QF").style.color = "#ffffff";
+            document.getElementById("team2QF").style.color = "#ffffff";
         }
         var team3 = teamsQF[2];
         var team4 = teamsQF[3];
@@ -601,8 +601,8 @@
         if (score3 > score4) {
             document.getElementById("team2SF").innerHTML = team3;
             teamsSF[team3];
-            document.getElementById("team4QF").style.color="#ff6666";
-            document.getElementById("team3QF").style.color="#7CFC00";
+            document.getElementById("team4QF").style.color = "#ff6666";
+            document.getElementById("team3QF").style.color = "#7CFC00";
             // document.getElementById("final16Score5").readOnly=true;
             // document.getElementById("final16Score6").readOnly=true;
             // document.getElementById("final16Score7").readOnly=true;
@@ -611,8 +611,8 @@
         else if (score4 > score3) {
             document.getElementById("team2SF").innerHTML = team4;
             teamsSF.push(team4);
-            document.getElementById("team3QF").style.color="#ff6666";
-            document.getElementById("team4QF").style.color="#7CFC00";
+            document.getElementById("team3QF").style.color = "#ff6666";
+            document.getElementById("team4QF").style.color = "#7CFC00";
             // document.getElementById("final16Score5").readOnly=true;
             // document.getElementById("final16Score6").readOnly=true;
             // document.getElementById("final16Score7").readOnly=true;
@@ -620,15 +620,15 @@
         }
         else {
             document.getElementById("team2SF").innerHTML = "TBA";
-            document.getElementById("team3QF").style.color="#ffffff";
-            document.getElementById("team4QF").style.color="#ffffff";
+            document.getElementById("team3QF").style.color = "#ffffff";
+            document.getElementById("team4QF").style.color = "#ffffff";
         }
-        if((score1!=score2) && (score3!=score4)){
-            document.getElementById("SFScore1").setAttribute('type','number');
-            document.getElementById("SFScore2").setAttribute('type','number');            
-        }else{
-            document.getElementById("SFScore1").setAttribute('type','hidden');
-            document.getElementById("SFScore2").setAttribute('type','hidden');
+        if ((score1 != score2) && (score3 != score4)) {
+            document.getElementById("SFScore1").setAttribute('type', 'number');
+            document.getElementById("SFScore2").setAttribute('type', 'number');
+        } else {
+            document.getElementById("SFScore1").setAttribute('type', 'hidden');
+            document.getElementById("SFScore2").setAttribute('type', 'hidden');
         }
         var team5 = teamsQF[4];
         var team6 = teamsQF[5];
@@ -637,8 +637,8 @@
         if (score5 > score6) {
             document.getElementById("team3SF").innerHTML = team5;
             teamsSF.push(team5);
-            document.getElementById("team6QF").style.color="#ff6666";
-            document.getElementById("team5QF").style.color="#7CFC00";
+            document.getElementById("team6QF").style.color = "#ff6666";
+            document.getElementById("team5QF").style.color = "#7CFC00";
             // document.getElementById("final16Score9").readOnly=true;
             // document.getElementById("final16Score10").readOnly=true;
             // document.getElementById("final16Score11").readOnly=true;
@@ -647,8 +647,8 @@
         else if (score6 > score5) {
             document.getElementById("team3SF").innerHTML = team6;
             teamsSF.push(team6);
-            document.getElementById("team5QF").style.color="#ff6666";
-            document.getElementById("team6QF").style.color="#7CFC00";
+            document.getElementById("team5QF").style.color = "#ff6666";
+            document.getElementById("team6QF").style.color = "#7CFC00";
             // document.getElementById("final16Score9").readOnly=true;
             // document.getElementById("final16Score10").readOnly=true;
             // document.getElementById("final16Score11").readOnly=true;
@@ -656,8 +656,8 @@
         }
         else {
             document.getElementById("team3SF").innerHTML = "TBA";
-            document.getElementById("team5QF").style.color="#ffffff";
-            document.getElementById("team6QF").style.color="#ffffff";
+            document.getElementById("team5QF").style.color = "#ffffff";
+            document.getElementById("team6QF").style.color = "#ffffff";
         }
         var team7 = teamsQF[6];
         var team8 = teamsQF[7];
@@ -666,8 +666,8 @@
         if (score7 > score8) {
             document.getElementById("team4SF").innerHTML = team7;
             teamsSF[3] = team7;
-            document.getElementById("team8QF").style.color="#ff6666";
-            document.getElementById("team7QF").style.color="#7CFC00";
+            document.getElementById("team8QF").style.color = "#ff6666";
+            document.getElementById("team7QF").style.color = "#7CFC00";
             // document.getElementById("final16Score13").readOnly=true;
             // document.getElementById("final16Score14").readOnly=true;
             // document.getElementById("final16Score15").readOnly=true;
@@ -676,8 +676,8 @@
         else if (score8 > score7) {
             document.getElementById("team4SF").innerHTML = team8;
             teamsSF[3] = team8;
-            document.getElementById("team7QF").style.color="#ff6666";
-            document.getElementById("team8QF").style.color="#7CFC00";
+            document.getElementById("team7QF").style.color = "#ff6666";
+            document.getElementById("team8QF").style.color = "#7CFC00";
             // document.getElementById("final16Score13").readOnly=true;
             // document.getElementById("final16Score14").readOnly=true;
             // document.getElementById("final16Score15").readOnly=true;
@@ -685,24 +685,24 @@
         }
         else {
             document.getElementById("team4SF").innerHTML = "TBA";
-            document.getElementById("team7QF").style.color="#ffffff";
-            document.getElementById("team8QF").style.color="#ffffff";
+            document.getElementById("team7QF").style.color = "#ffffff";
+            document.getElementById("team8QF").style.color = "#ffffff";
         }
-        if((score5!=score6) && (score7!=score8)){
-            document.getElementById("SFScore3").setAttribute('type','number');
-            document.getElementById("SFScore4").setAttribute('type','number');
-        }else{
-            document.getElementById("SFScore3").setAttribute('type','hidden');
-            document.getElementById("SFScore4").setAttribute('type','hidden');
+        if ((score5 != score6) && (score7 != score8)) {
+            document.getElementById("SFScore3").setAttribute('type', 'number');
+            document.getElementById("SFScore4").setAttribute('type', 'number');
+        } else {
+            document.getElementById("SFScore3").setAttribute('type', 'hidden');
+            document.getElementById("SFScore4").setAttribute('type', 'hidden');
         }
-        let result1=team1+" "+score1+":"+score2+" "+team2;
-        (team1 && team2) !=null?document.getElementById("QFWinner1").innerHTML = result1:document.getElementById("QFWinner1").innerHTML = "";
-        let result2=team3+" "+score3+":"+score4+" "+team4;
-        (team3 && team4)!= null ? document.getElementById("QFWinner2").innerHTML = result2:document.getElementById("QFWinner2").innerHTML = "";
-        let result3=team5+" "+score5+":"+score6+" "+team6;
-        (team5 && team6)!= null ? document.getElementById("QFWinner3").innerHTML = result3:document.getElementById("QFWinner3").innerHTML = "";
-        let result4=team7+" "+score7+":"+score8+" "+team8;
-        (team7 && team8)!= null ? document.getElementById("QFWinner4").innerHTML = result4:document.getElementById("QFWinner4").innerHTML = "";
+        let result1 = team1 + " " + score1 + ":" + score2 + " " + team2;
+        (team1 && team2) != null ? document.getElementById("QFWinner1").innerHTML = result1 : document.getElementById("QFWinner1").innerHTML = "";
+        let result2 = team3 + " " + score3 + ":" + score4 + " " + team4;
+        (team3 && team4) != null ? document.getElementById("QFWinner2").innerHTML = result2 : document.getElementById("QFWinner2").innerHTML = "";
+        let result3 = team5 + " " + score5 + ":" + score6 + " " + team6;
+        (team5 && team6) != null ? document.getElementById("QFWinner3").innerHTML = result3 : document.getElementById("QFWinner3").innerHTML = "";
+        let result4 = team7 + " " + score7 + ":" + score8 + " " + team8;
+        (team7 && team8) != null ? document.getElementById("QFWinner4").innerHTML = result4 : document.getElementById("QFWinner4").innerHTML = "";
     }
     function scoreFunctionSF() {
         teamsFinal = [];
@@ -713,8 +713,8 @@
         if (score1 > score2) {
             document.getElementById("team1Final").innerHTML = team1;
             teamsFinal.push(team1);
-            document.getElementById("team2SF").style.color="#ff6666";
-            document.getElementById("team1SF").style.color="#7CFC00";
+            document.getElementById("team2SF").style.color = "#ff6666";
+            document.getElementById("team1SF").style.color = "#7CFC00";
             // document.getElementById("QFScore1").readOnly=true;
             // document.getElementById("QFScore2").readOnly=true;
             // document.getElementById("QFScore3").readOnly=true;
@@ -723,8 +723,8 @@
         else if (score2 > score1) {
             document.getElementById("team1Final").innerHTML = team2;
             teamsFinal.push(team2);
-            document.getElementById("team1SF").style.color="#ff6666";
-            document.getElementById("team2SF").style.color="#7CFC00";
+            document.getElementById("team1SF").style.color = "#ff6666";
+            document.getElementById("team2SF").style.color = "#7CFC00";
             // document.getElementById("QFScore1").readOnly=true;
             // document.getElementById("QFScore2").readOnly=true;
             // document.getElementById("QFScore3").readOnly=true;
@@ -732,8 +732,8 @@
         }
         else {
             document.getElementById("team1Final").innerHTML = "TBA";
-            document.getElementById("team1SF").style.color="#ffffff";
-            document.getElementById("team2SF").style.color="#ffffff";
+            document.getElementById("team1SF").style.color = "#ffffff";
+            document.getElementById("team2SF").style.color = "#ffffff";
         }
         var team3 = teamsSF[2];
         var team4 = teamsSF[3];
@@ -742,8 +742,8 @@
         if (score3 > score4) {
             document.getElementById("team2Final").innerHTML = team3;
             teamsFinal.push(team3);
-            document.getElementById("team4SF").style.color="#ff6666";
-            document.getElementById("team3SF").style.color="#7CFC00";
+            document.getElementById("team4SF").style.color = "#ff6666";
+            document.getElementById("team3SF").style.color = "#7CFC00";
             // document.getElementById("QFScore5").readOnly=true;
             // document.getElementById("QFScore6").readOnly=true;
             // document.getElementById("QFScore7").readOnly=true;
@@ -752,8 +752,8 @@
         else if (score4 > score3) {
             document.getElementById("team2Final").innerHTML = team4;
             teamsFinal.push(team4);
-            document.getElementById("team3SF").style.color="#ff6666";
-            document.getElementById("team4SF").style.color="#7CFC00";
+            document.getElementById("team3SF").style.color = "#ff6666";
+            document.getElementById("team4SF").style.color = "#7CFC00";
             // document.getElementById("QFScore5").readOnly=true;
             // document.getElementById("QFScore6").readOnly=true;
             // document.getElementById("QFScore7").readOnly=true;
@@ -761,21 +761,21 @@
         }
         else {
             document.getElementById("team2Final").innerHTML = "TBA";
-            document.getElementById("team3SF").style.color="#ffffff";
-            document.getElementById("team4SF").style.color="#ffffff";
+            document.getElementById("team3SF").style.color = "#ffffff";
+            document.getElementById("team4SF").style.color = "#ffffff";
         }
         console.log(teamsSF);
-        if((score1!=score2) && (score3!=score4)){
-            document.getElementById("FScore1").setAttribute('type','number');
-            document.getElementById("FScore2").setAttribute('type','number');
-        }else{
-            document.getElementById("FScore1").setAttribute('type','hidden');
-            document.getElementById("FScore2").setAttribute('type','hidden');
+        if ((score1 != score2) && (score3 != score4)) {
+            document.getElementById("FScore1").setAttribute('type', 'number');
+            document.getElementById("FScore2").setAttribute('type', 'number');
+        } else {
+            document.getElementById("FScore1").setAttribute('type', 'hidden');
+            document.getElementById("FScore2").setAttribute('type', 'hidden');
         }
-        let result1=team1+" "+score1+":"+score2+" "+team2;
-        (team1 && team2) != null ? document.getElementById("SFWinner1").innerHTML = result1:document.getElementById("SFWinner1").innerHTML = ""; 
-        let result2=team3+" "+score3+":"+score4+" "+team4;
-        (team3 && team4)!=null?document.getElementById("SFWinner2").innerHTML = result2:document.getElementById("SFWinner2").innerHTML ="";
+        let result1 = team1 + " " + score1 + ":" + score2 + " " + team2;
+        (team1 && team2) != null ? document.getElementById("SFWinner1").innerHTML = result1 : document.getElementById("SFWinner1").innerHTML = "";
+        let result2 = team3 + " " + score3 + ":" + score4 + " " + team4;
+        (team3 && team4) != null ? document.getElementById("SFWinner2").innerHTML = result2 : document.getElementById("SFWinner2").innerHTML = "";
     }
     function scoreFuntionFinals() {
         teamChamp = [];
@@ -786,8 +786,8 @@
         if (score1 > score2) {
             document.getElementById("teamWinner").innerHTML = team1;
             teamChamp.push(team1);
-            document.getElementById("team2Final").style.color="#ff6666";
-            document.getElementById("team1Final").style.color="#7CFC00";
+            document.getElementById("team2Final").style.color = "#ff6666";
+            document.getElementById("team1Final").style.color = "#7CFC00";
             // document.getElementById("SFScore1").readOnly=true;
             // document.getElementById("SFScore2").readOnly=true;
             // document.getElementById("SFScore3").readOnly=true;
@@ -796,20 +796,20 @@
         else if (score2 > score1) {
             document.getElementById("teamWinner").innerHTML = team2;
             teamChamp.push(team2);
-            document.getElementById("team1Final").style.color="#ff6666";
-            document.getElementById("team2Final").style.color="#7CFC00";
+            document.getElementById("team1Final").style.color = "#ff6666";
+            document.getElementById("team2Final").style.color = "#7CFC00";
             // document.getElementById("SFScore1").readOnly=true;
             // document.getElementById("SFScore2").readOnly=true;
             // document.getElementById("SFScore3").readOnly=true;
             // document.getElementById("SFScore4").readOnly=true;
         }
-        else{
+        else {
             document.getElementById("teamWinner").innerHTML = "TBA";
-            document.getElementById("team2Final").style.color="#ffffff";
-            document.getElementById("team1Final").style.color="#ffffff";
+            document.getElementById("team2Final").style.color = "#ffffff";
+            document.getElementById("team1Final").style.color = "#ffffff";
         }
-        let result1=team1+" "+score1+":"+score2+" "+team2;
-        (team1 && team2)!= null ? document.getElementById("FinalWinner").innerHTML = result1:document.getElementById("FinalWinner").innerHTML = "";
+        let result1 = team1 + " " + score1 + ":" + score2 + " " + team2;
+        (team1 && team2) != null ? document.getElementById("FinalWinner").innerHTML = result1 : document.getElementById("FinalWinner").innerHTML = "";
     }
     window.onload = scoreFunction();
     window.onload = scoreFunctionQF();
@@ -840,7 +840,7 @@
         document.getElementById("bracketDIV").style.display = 'none';
     }
 
-    function displayBracket(){
+    function displayBracket() {
         document.getElementById("resultDIV").style.display = 'none';
         document.getElementById("bracketDIV").style.display = 'block';
     }
