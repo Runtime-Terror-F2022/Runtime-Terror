@@ -2,21 +2,20 @@
 <button onclick="displayBracket()">See Bracket</button>
 <div class="container" id="resultDIV" style="display: none">
     <div class="row">
-        <div class="offset-md-3 col-md-6">
+        <div>
             <h1>
                Tournaments Result 
             </h1>
                 <div class="card w-90">
                  <div class="card-body">
-                     <h5 class="card-title-Black">Winners</h5>
                      <table class="table">
                         <thead class="thead-dark">
                           <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Round16</th>
-                            <th scope="col">Quarter-Finals</th>
-                            <th scope="col">Semi-Finals</th>
-                            <th scope="col">Finals</th>
+                            <th scope="col">Final 16</th>
+                            <th scope="col">Quarter Final</th>
+                            <th scope="col">Semi Final</th>
+                            <th scope="col">Final</th>
 
                           </tr>
                         </thead>
@@ -546,7 +545,22 @@
             document.getElementById("QFScore7").setAttribute('type','hidden');
             document.getElementById("QFScore8").setAttribute('type','hidden');
         }
-
+        let result1=team1+" "+score1+":"+score2+" "+team2;
+        document.getElementById("R16Winner1").innerHTML = result1;
+        let result2=team3+" "+score3+":"+score4+" "+team4;
+        document.getElementById("R16Winner2").innerHTML = result2;
+        let result3=team5+" "+score5+":"+score6+" "+team6;
+        document.getElementById("R16Winner3").innerHTML = result3;
+        let result4=team7+" "+score7+":"+score8+" "+team8;
+        document.getElementById("R16Winner4").innerHTML = result4;
+        let result5=team9+" "+score9+":"+score10+" "+team10;
+        document.getElementById("R16Winner5").innerHTML = result5;
+        let result6=team11+" "+score11+":"+score12+" "+team12;
+        document.getElementById("R16Winner6").innerHTML = result6;
+        let result7=team13+" "+score13+":"+score14+" "+team14;
+        document.getElementById("R16Winner7").innerHTML = result7;
+        let result8=team15+" "+score15+":"+score16+" "+team16;
+        document.getElementById("R16Winner8").innerHTML = result8;
     }
     function scoreFunctionQF() {
         teamsSF = [];
@@ -681,6 +695,14 @@
             document.getElementById("SFScore3").setAttribute('type','hidden');
             document.getElementById("SFScore4").setAttribute('type','hidden');
         }
+        let result1=team1+" "+score1+":"+score2+" "+team2;
+        (team1 && team2) !=null?document.getElementById("QFWinner1").innerHTML = result1:document.getElementById("QFWinner1").innerHTML = "";
+        let result2=team3+" "+score3+":"+score4+" "+team4;
+        (team3 && team4)!= null ? document.getElementById("QFWinner2").innerHTML = result2:document.getElementById("QFWinner2").innerHTML = "";
+        let result3=team5+" "+score5+":"+score6+" "+team6;
+        (team5 && team6)!= null ? document.getElementById("QFWinner3").innerHTML = result3:document.getElementById("QFWinner3").innerHTML = "";
+        let result4=team7+" "+score7+":"+score8+" "+team8;
+        (team7 && team8)!= null ? document.getElementById("QFWinner4").innerHTML = result4:document.getElementById("QFWinner4").innerHTML = "";
     }
     function scoreFunctionSF() {
         teamsFinal = [];
@@ -750,6 +772,10 @@
             document.getElementById("FScore1").setAttribute('type','hidden');
             document.getElementById("FScore2").setAttribute('type','hidden');
         }
+        let result1=team1+" "+score1+":"+score2+" "+team2;
+        (team1 && team2) != null ? document.getElementById("SFWinner1").innerHTML = result1:document.getElementById("SFWinner1").innerHTML = ""; 
+        let result2=team3+" "+score3+":"+score4+" "+team4;
+        (team3 && team4)!=null?document.getElementById("SFWinner2").innerHTML = result2:document.getElementById("SFWinner2").innerHTML ="";
     }
     function scoreFuntionFinals() {
         teamChamp = [];
@@ -782,30 +808,32 @@
             document.getElementById("team2Final").style.color="#ffffff";
             document.getElementById("team1Final").style.color="#ffffff";
         }
+        let result1=team1+" "+score1+":"+score2+" "+team2;
+        (team1 && team2)!= null ? document.getElementById("FinalWinner").innerHTML = result1:document.getElementById("FinalWinner").innerHTML = "";
     }
     window.onload = scoreFunction();
     window.onload = scoreFunctionQF();
     window.onload = scoreFunctionSF();
     window.onload = scoreFuntionFinals();
 
-    teamsQF[0] != null ? document.getElementById("R16Winner1").innerHTML = teamsQF[0] : document.getElementById("R16Winner1").innerHTML = "";
-    teamsQF[1] != null ? document.getElementById("R16Winner2").innerHTML = teamsQF[1] : document.getElementById("R16Winner2").innerHTML = "";
-    teamsQF[2] != null ? document.getElementById("R16Winner3").innerHTML = teamsQF[2] : document.getElementById("R16Winner3").innerHTML = "";
-    teamsQF[3] != null ? document.getElementById("R16Winner4").innerHTML = teamsQF[3] : document.getElementById("R16Winner4").innerHTML = "";
-    teamsQF[4] != null ? document.getElementById("R16Winner5").innerHTML = teamsQF[4] : document.getElementById("R16Winner5").innerHTML = "";
-    teamsQF[5] != null ? document.getElementById("R16Winner6").innerHTML = teamsQF[5] : document.getElementById("R16Winner6").innerHTML = "";
-    teamsQF[6] != null ? document.getElementById("R16Winner7").innerHTML = teamsQF[6] : document.getElementById("R16Winner7").innerHTML = "";
-    teamsQF[7] != null ? document.getElementById("R16Winner8").innerHTML = teamsQF[7] : document.getElementById("R16Winner8").innerHTML = "";
+    // teamsQF[0] != null ? document.getElementById("R16Winner1").innerHTML = teamsQF[0] : document.getElementById("R16Winner1").innerHTML = "";
+    // teamsQF[1] != null ? document.getElementById("R16Winner2").innerHTML = teamsQF[1] : document.getElementById("R16Winner2").innerHTML = "";
+    // teamsQF[2] != null ? document.getElementById("R16Winner3").innerHTML = teamsQF[2] : document.getElementById("R16Winner3").innerHTML = "";
+    // teamsQF[3] != null ? document.getElementById("R16Winner4").innerHTML = teamsQF[3] : document.getElementById("R16Winner4").innerHTML = "";
+    // teamsQF[4] != null ? document.getElementById("R16Winner5").innerHTML = teamsQF[4] : document.getElementById("R16Winner5").innerHTML = "";
+    // teamsQF[5] != null ? document.getElementById("R16Winner6").innerHTML = teamsQF[5] : document.getElementById("R16Winner6").innerHTML = "";
+    // teamsQF[6] != null ? document.getElementById("R16Winner7").innerHTML = teamsQF[6] : document.getElementById("R16Winner7").innerHTML = "";
+    // teamsQF[7] != null ? document.getElementById("R16Winner8").innerHTML = teamsQF[7] : document.getElementById("R16Winner8").innerHTML = "";
 
-    teamsSF[0] != null ? document.getElementById("QFWinner1").innerHTML = teamsSF[0] : document.getElementById("QFWinner1").innerHTML = "";
-    teamsSF[1] != null ? document.getElementById("QFWinner2").innerHTML = teamsSF[1] : document.getElementById("QFWinner2").innerHTML = "";
-    teamsSF[2] != null ? document.getElementById("QFWinner3").innerHTML = teamsSF[2] : document.getElementById("QFWinner3").innerHTML = "";
-    teamsSF[3] != null ? document.getElementById("QFWinner4").innerHTML = teamsSF[3] : document.getElementById("QFWinner4").innerHTML = "";
+    // teamsSF[0] != null ? document.getElementById("QFWinner1").innerHTML = teamsSF[0] : document.getElementById("QFWinner1").innerHTML = "";
+    // teamsSF[1] != null ? document.getElementById("QFWinner2").innerHTML = teamsSF[1] : document.getElementById("QFWinner2").innerHTML = "";
+    // teamsSF[2] != null ? document.getElementById("QFWinner3").innerHTML = teamsSF[2] : document.getElementById("QFWinner3").innerHTML = "";
+    // teamsSF[3] != null ? document.getElementById("QFWinner4").innerHTML = teamsSF[3] : document.getElementById("QFWinner4").innerHTML = "";
 
-    teamsFinal[0] != null ? document.getElementById("SFWinner1").innerHTML = teamsFinal[0] : document.getElementById("SFWinner1").innerHTML = "";
-    teamsFinal[1] != null ? document.getElementById("SFWinner2").innerHTML = teamsFinal[1] : document.getElementById("SFWinner2").innerHTML = "";
+    // teamsFinal[0] != null ? document.getElementById("SFWinner1").innerHTML = teamsFinal[0] : document.getElementById("SFWinner1").innerHTML = "";
+    // teamsFinal[1] != null ? document.getElementById("SFWinner2").innerHTML = teamsFinal[1] : document.getElementById("SFWinner2").innerHTML = "";
 
-    teamChamp[0] != null ? document.getElementById("FinalWinner").innerHTML = teamChamp[0] : document.getElementById("FinalWinner").innerHTML = "";
+    // teamChamp[0] != null ? document.getElementById("FinalWinner").innerHTML = teamChamp[0] : document.getElementById("FinalWinner").innerHTML = "";
 
     function displayResult() {
         document.getElementById("resultDIV").style.display = 'block';
