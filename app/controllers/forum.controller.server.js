@@ -39,19 +39,19 @@ export function ProcessForumAddPage(req, res, next){
         res.redirect('/forum-list');
     })
 
-    let comment = commentModel({
-        forumID: forumModel._id,
-        username: req.body.username,
-        comment: req.body.comment,
-    });
+    // let comment = commentModel({
+    //     forumID: forumModel._id,
+    //     username: req.body.username,
+    //     comment: req.body.comment,
+    // });
 
-    commentModel.create(comment, (err, comment) => {
-        if(err){
-            console.error(err);
-            res.end(err);
-        };
-        res.redirect('/forum-list');
-    })
+    // commentModel.create(comment, (err, comment) => {
+    //     if(err){
+    //         console.error(err);
+    //         res.end(err);
+    //     };
+    //     res.redirect('/forum-list');
+    // })
 
 
 }
@@ -101,8 +101,9 @@ export function ProcessForumDelete(req, res, next){
 }
 
 export function DisplayCommentsPage(req, res, next){
+    let id = req.params.id;
 
-    commentModel.find(function(err, commentCollection){
+    commentModel.find({forumID: id}, function(err, commentCollection){
         if(err){
             console.error(err);
             res.end(err);
@@ -121,12 +122,12 @@ export function ProcessComments(req, res, next){
         comment: req.body.comment
     });
 
-    commentModel.create({forumID: id}, comment, (err, Comment) => {
+    commentModel.create(comment, (err, Comment) => {
         if(err){
             console.error(err);
             res.end(err);
         };
-        res.redirect('/forum-comments/:id');
+        res.redirect('/forum-comments/'+id);
     })
 }
 

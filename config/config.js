@@ -5,3 +5,4 @@ export const Secret = "MySecret";
 
 // For Testing the db 
 export const MongoURI= "mongodb+srv://cymdiesel:password229@comp229-cymantha-diesel.jfxynze.mongodb.net/?retryWrites=true&w=majority";
+// export const MongoURI= "mongodb+srv://tony4comp229:randompassword123@comp229-f2022-tony-3012.zvsporp.mongodb.net/bracketTest?retryWrites=true&w=majority";;
