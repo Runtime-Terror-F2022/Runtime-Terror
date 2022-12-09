@@ -7,6 +7,7 @@ import commentModel from '../models/forum-comments.js';
 
 // import DisplayName Utility method
 import { UserDisplayName, UserProfileType } from '../utils/index.js';
+import forum from '../models/forum.js';
 
 //rendering pages for tournaments pages
 export function DisplayForumList(req, res, next){
@@ -20,7 +21,7 @@ export function DisplayForumList(req, res, next){
 }
 
 export function DisplayForumAddPage(req, res, next){
-    res.render('index', {title: 'Add a Comment', page: 'forums/edit', forum: {}, user: req.user, displayName: UserDisplayName(req)});
+    res.render('index', {title: 'Add a Comment', page: 'forums/edit', forum: {}, comments: {}, user: req.user, displayName: UserDisplayName(req)});
 }
 
 export function ProcessForumAddPage(req, res, next){
@@ -37,6 +38,22 @@ export function ProcessForumAddPage(req, res, next){
         };
         res.redirect('/forum-list');
     })
+
+    let comment = commentModel({
+        forumID: forumModel._id,
+        username: req.body.username,
+        comment: req.body.comment,
+    });
+
+    commentModel.create(comment, (err, comment) => {
+        if(err){
+            console.error(err);
+            res.end(err);
+        };
+        res.redirect('/forum-list');
+    })
+
+
 }
 
 export function DisplayForumEditPage(req, res, next){
@@ -96,13 +113,15 @@ export function DisplayCommentsPage(req, res, next){
 }
 
 export function ProcessComments(req, res, next){
-    let newComment = commentModel({
+    let id = req.params.id;
+
+    let comment = commentModel({forumID: id},{
+        
         username: req.body.username,
         comment: req.body.comment
-
     });
 
-    commentModel.create(newComment, (err, Forum) => {
+    commentModel.create({forumID: id}, comment, (err, Comment) => {
         if(err){
             console.error(err);
             res.end(err);

@@ -4,8 +4,9 @@ import mongoose, { Schema } from 'mongoose';
 const Scheme = mongoose.Schema;
 
 const commentsSchema = new Schema({
+    forumID: String,
     username: String,
-    comment: String,
+    comment: String
     
 }, {
     timestamps: true,

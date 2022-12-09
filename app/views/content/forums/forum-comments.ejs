@@ -9,12 +9,14 @@
                 <div class="jumbotron">
                 <h1 class="display-6">Add Comments</h1>
                 <br>
-                <input id = "username" class="form-control" placeholder="Name" value="<%= comments.username %>">
-                <br>
-                <textarea id = "comment" class="form-control" placeholder= "Your Comment Here" value="<%= comments.comment %>">
-               </textarea>
-                <br>
-                <button id="send" class="btn btn-success">Send</button>
+                <form method="POST">
+                    <input id = "username" class="form-control" placeholder="Name" value="<%= comments.username %>">
+                    <br>
+                    <textarea id = "comment" class="form-control" placeholder= "Your Comment Here" value="<%= comments.comment %>">
+                </textarea>
+                    <br>
+                    <button id="send" class="btn btn-success">Send</button>
+                </form>
                 </div>
                 <div id="comments">
 
@@ -49,7 +51,7 @@
     
         
                                         <td class="text-center col-1">
-                                            <a href="/comment-delete/<%= forums[count]._id %>"
+                                            <a href="/comment-delete/<%= comments[count]._id %>"
                                                 class="btn btn-danger btn-sm">
                                                 <i class="fas fa-trash-alt"></i> Delete</a>
                                         </td>
