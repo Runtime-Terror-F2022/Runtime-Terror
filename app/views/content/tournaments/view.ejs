@@ -1,4 +1,83 @@
-<div class="t-container">
+<button onclick="displayResult()">View Result</button>
+<button onclick="displayBracket()">See Bracket</button>
+<div class="container" id="resultDIV" style="display: none">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1>
+               Tournaments Result 
+            </h1>
+                <div class="card w-90">
+                 <div class="card-body">
+                     <h5 class="card-title-Black">Winners</h5>
+                     <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Round16</th>
+                            <th scope="col">Quarter-Finals</th>
+                            <th scope="col">Semi-Finals</th>
+                            <th scope="col">Finals</th>
+
+                          </tr>
+                        </thead>
+                        <tbody id="tournamentResult">
+                            
+                          <tr>
+                            <th scope="row">1</th>
+                           
+                            <td id="R16Winner1">                      </td>
+                            <td id="QFWinner1">                       </td>
+                            <td id="SFWinner1">                       </td>
+                            <td id="FinalWinner">                       </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td id="R16Winner2">                       </td>
+                            <td id="QFWinner2">                       </td>
+                            <td id="SFWinner2">                       </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td id="R16Winner3">                       </td>
+                            <td id="QFWinner3">                       </td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td id="R16Winner4">                       </td>
+                            <td id="QFWinner4">                       </td>
+                           
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td id="R16Winner5">                       </td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td id="R16Winner6">                       </td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td id="R16Winner7">                       </td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td id="R16Winner8">                       </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                      
+                 </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="t-container" id="bracketDIV" style="display: block">
     <form class="form" method="POST">
         <div class="roundHeaders">
             <h4 class="round-header">Round 16
@@ -254,8 +333,8 @@
             <ul class="bracket-card bracket-5">
                 <li class="card text-white bg-warning mb-3" style="max-width: 18rem;">
                     <p class="teamId" id="teamWinner">TBA</p>
-                    <a href = "/result">View Result</a>
-
+                    <!-- <a href = "/result">View Result</a> -->
+                    
                 </li>
             </ul>
         </div>
@@ -708,4 +787,34 @@
     window.onload = scoreFunctionQF();
     window.onload = scoreFunctionSF();
     window.onload = scoreFuntionFinals();
+
+    document.getElementById("R16Winner1").innerHTML = teamsQF[0];
+    document.getElementById("R16Winner2").innerHTML = teamsQF[1];
+    document.getElementById("R16Winner3").innerHTML = teamsQF[2];
+    document.getElementById("R16Winner4").innerHTML = teamsQF[3];
+    document.getElementById("R16Winner5").innerHTML = teamsQF[4];
+    document.getElementById("R16Winner6").innerHTML = teamsQF[5];
+    document.getElementById("R16Winner7").innerHTML = teamsQF[6];
+    document.getElementById("R16Winner8").innerHTML = teamsQF[7];
+
+    document.getElementById("QFWinner1").innerHTML = teamsSF[0];
+    document.getElementById("QFWinner2").innerHTML = teamsSF[1];
+    document.getElementById("QFWinner3").innerHTML = teamsSF[2];
+    document.getElementById("QFWinner4").innerHTML = teamsSF[3];
+
+    document.getElementById("SFWinner1").innerHTML = teamsFinal[0];
+    document.getElementById("SFWinner2").innerHTML = teamsFinal[1];
+
+    document.getElementById("FinalWinner").innerHTML = teamChamp[0];
+
+    function displayResult() {
+        document.getElementById("resultDIV").style.display = 'block';
+        document.getElementById("bracketDIV").style.display = 'none';
+    }
+
+    function displayBracket(){
+        document.getElementById("resultDIV").style.display = 'none';
+        document.getElementById("bracketDIV").style.display = 'block';
+    }
+
 </script>
