@@ -96,6 +96,12 @@ export function ProcessForumDelete(req, res, next){
             console.error(err);
             res.end(err);
         }
+        commentModel.remove({forumID: id}, (err) => {
+            if (err){
+                console.error(err);
+                res.end(err);
+            }
+        });
         res.redirect('/forum-list');
     })
 }
