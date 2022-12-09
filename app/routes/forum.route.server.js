@@ -1,6 +1,6 @@
 import { application, Router } from "express";
 
-import {DisplayForumList, DisplayForumEditPage, DisplayForumAddPage, ProcessForumAddPage, ProcessForumEditPage, ProcessForumDelete, DisplayCommentsPage, GetComments, SendComments} from "../controllers/forum.controller.server.js";
+import {DisplayForumList, DisplayForumEditPage, DisplayForumAddPage, ProcessForumAddPage, ProcessForumEditPage, ProcessForumDelete, DisplayCommentsPage, ProcessComments, ProcessCommentDelete} from "../controllers/forum.controller.server.js";
 
 import { AuthGuard } from "../utils/index.js";
 
@@ -15,9 +15,10 @@ router.post('/forum-edit/:id', AuthGuard, ProcessForumEditPage);
 router.get('/forum-delete/:id', AuthGuard, ProcessForumDelete);
 
 // routers for processing and displaying the comments for the forums 
-router.post('/forum-comments/:id', AuthGuard, SendComments);
 router.get('/forum-comments/:id', AuthGuard, DisplayCommentsPage);
-router.get('/forum-comments/:id', AuthGuard, GetComments)
+router.post('/forum-comments-add', AuthGuard, ProcessComments);
+router.get('/forum-comments-delete/:id', AuthGuard, ProcessCommentDelete);
+
 
 
 

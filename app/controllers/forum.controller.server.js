@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import forumModel from '../models/forum.js';
 import commentModel from '../models/forum-comments.js';
 
+
 // import DisplayName Utility method
 import { UserDisplayName, UserProfileType } from '../utils/index.js';
 
@@ -26,7 +27,7 @@ export function ProcessForumAddPage(req, res, next){
     let newForum = forumModel({
         name: req.body.name,
         topic: req.body.topic,
-        comment: req.body.comment
+        description: req.body.description,
     });
 
     forumModel.create(newForum, (err, Forum) => {
@@ -57,7 +58,7 @@ export function ProcessForumEditPage(req, res, next){
         _id: req.body.id,
         name: req.body.name,
         topic: req.body.topic,
-        comment: req.body.comment
+        description: req.body.description
 
     });
 
@@ -82,13 +83,26 @@ export function ProcessForumDelete(req, res, next){
     })
 }
 
-export function SendComments(req, res, next){
+export function DisplayCommentsPage(req, res, next){
+
+    commentModel.find(function(err, commentCollection){
+        if(err){
+            console.error(err);
+            res.end(err);
+        }
+        res.render('index', {title: '', page: 'forums/forum-comments', comments: commentCollection, user: req.user, displayName: UserDisplayName(req), profileType: UserProfileType(req)});
+    })
+
+}
+
+export function ProcessComments(req, res, next){
     let newComment = commentModel({
         username: req.body.username,
-        message: req.body.message
+        comment: req.body.comment
+
     });
 
-    commentModel.create(newComment, (err, Comment) => {
+    commentModel.create(newComment, (err, Forum) => {
         if(err){
             console.error(err);
             res.end(err);
@@ -97,26 +111,14 @@ export function SendComments(req, res, next){
     })
 }
 
-export function DisplayCommentsPage(req, res, next){
-
-    forumModel.find(function(err, forumCollection){
-        if(err){
+export function ProcessCommentDelete(req, res, next){
+    let id = req.params.id;
+    
+    commentModel.remove({_id: id}, (err) => {
+        if (err){
             console.error(err);
             res.end(err);
         }
-        res.render('index', {title: '', page: 'forums/forum-comments', forums: forumCollection, user: req.user, displayName: UserDisplayName(req), profileType: UserProfileType(req), comments: req.commentModel});
-        GetComments(req.commentModel);
-    })
-
-}
-
-export function GetComments(req, res, next){
-
-    commentModel.findById(function(err, commentCollection){
-        if(err){
-            console.error(err);
-            res.end(err);
-        }
-        res.render('index', {comments: commentCollection});
+        res.redirect('/forum-comments/:id');
     })
 }

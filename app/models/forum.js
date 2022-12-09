@@ -6,7 +6,8 @@ const Scheme = mongoose.Schema;
 const forumSchema = new Schema({
     name: String,
     topic: String,
-    comment: String,
+    description: String,
+
     
 }, {
     timestamps: true,
