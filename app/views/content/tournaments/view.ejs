@@ -797,15 +797,15 @@
     document.getElementById("R16Winner7").innerHTML = teamsQF[6];
     document.getElementById("R16Winner8").innerHTML = teamsQF[7];
 
-    document.getElementById("QFWinner1").innerHTML = teamsSF[0];
-    document.getElementById("QFWinner2").innerHTML = teamsSF[1];
-    document.getElementById("QFWinner3").innerHTML = teamsSF[2];
-    document.getElementById("QFWinner4").innerHTML = teamsSF[3];
+    teamsSF[0] != null ? document.getElementById("QFWinner1").innerHTML = teamsSF[0] : document.getElementById("QFWinner1").innerHTML = "";
+    teamsSF[1] != null ? document.getElementById("QFWinner2").innerHTML = teamsSF[1] : document.getElementById("QFWinner2").innerHTML = "";
+    teamsSF[2] != null ? document.getElementById("QFWinner3").innerHTML = teamsSF[2] : document.getElementById("QFWinner3").innerHTML = "";
+    teamsSF[3] != null ? document.getElementById("QFWinner4").innerHTML = teamsSF[3] : document.getElementById("QFWinner4").innerHTML = "";
 
-    document.getElementById("SFWinner1").innerHTML = teamsFinal[0];
-    document.getElementById("SFWinner2").innerHTML = teamsFinal[1];
+    teamsFinal[0] != null ? document.getElementById("SFWinner1").innerHTML = teamsFinal[0] : document.getElementById("SFWinner1").innerHTML = "";
+    teamsFinal[1] != null ? document.getElementById("SFWinner2").innerHTML = teamsFinal[1] : document.getElementById("SFWinner2").innerHTML = "";
 
-    document.getElementById("FinalWinner").innerHTML = teamChamp[0];
+    teamChamp[0] != null ? document.getElementById("FinalWinner").innerHTML = teamChamp[0] : document.getElementById("FinalWinner").innerHTML = "";
 
     function displayResult() {
         document.getElementById("resultDIV").style.display = 'block';
