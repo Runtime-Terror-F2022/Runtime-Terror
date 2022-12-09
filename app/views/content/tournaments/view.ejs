@@ -788,14 +788,14 @@
     window.onload = scoreFunctionSF();
     window.onload = scoreFuntionFinals();
 
-    document.getElementById("R16Winner1").innerHTML = teamsQF[0];
-    document.getElementById("R16Winner2").innerHTML = teamsQF[1];
-    document.getElementById("R16Winner3").innerHTML = teamsQF[2];
-    document.getElementById("R16Winner4").innerHTML = teamsQF[3];
-    document.getElementById("R16Winner5").innerHTML = teamsQF[4];
-    document.getElementById("R16Winner6").innerHTML = teamsQF[5];
-    document.getElementById("R16Winner7").innerHTML = teamsQF[6];
-    document.getElementById("R16Winner8").innerHTML = teamsQF[7];
+    teamsQF[0] != null ? document.getElementById("R16Winner1").innerHTML = teamsQF[0] : document.getElementById("R16Winner1").innerHTML = "";
+    teamsQF[1] != null ? document.getElementById("R16Winner2").innerHTML = teamsQF[1] : document.getElementById("R16Winner2").innerHTML = "";
+    teamsQF[2] != null ? document.getElementById("R16Winner3").innerHTML = teamsQF[2] : document.getElementById("R16Winner3").innerHTML = "";
+    teamsQF[3] != null ? document.getElementById("R16Winner4").innerHTML = teamsQF[3] : document.getElementById("R16Winner4").innerHTML = "";
+    teamsQF[4] != null ? document.getElementById("R16Winner5").innerHTML = teamsQF[4] : document.getElementById("R16Winner5").innerHTML = "";
+    teamsQF[5] != null ? document.getElementById("R16Winner6").innerHTML = teamsQF[5] : document.getElementById("R16Winner6").innerHTML = "";
+    teamsQF[6] != null ? document.getElementById("R16Winner7").innerHTML = teamsQF[6] : document.getElementById("R16Winner7").innerHTML = "";
+    teamsQF[7] != null ? document.getElementById("R16Winner8").innerHTML = teamsQF[7] : document.getElementById("R16Winner8").innerHTML = "";
 
     teamsSF[0] != null ? document.getElementById("QFWinner1").innerHTML = teamsSF[0] : document.getElementById("QFWinner1").innerHTML = "";
     teamsSF[1] != null ? document.getElementById("QFWinner2").innerHTML = teamsSF[1] : document.getElementById("QFWinner2").innerHTML = "";

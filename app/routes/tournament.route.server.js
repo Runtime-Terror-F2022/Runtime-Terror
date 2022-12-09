@@ -14,7 +14,7 @@ router.post('/tournament-add', AuthGuard, ProcessTournamentAddPage);
 router.get('/tournament-edit/:id', AuthGuard, DisplayTournamentEditPage);
 router.post('/tournament-edit/:id', AuthGuard, ProcessTournamentEditPage);
 router.get('/tournament-delete/:id', AuthGuard, ProcessTournamentDelete);
-router.get('/tournament-view/:id', DisplayBracket);
-router.post('/tournament-view/:id', SubmitResults);
+router.get('/tournament-view/:id', AuthGuard, DisplayBracket);
+router.post('/tournament-view/:id', AuthGuard, SubmitResults);
 
 export default router;
