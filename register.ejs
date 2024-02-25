@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="row">
+      <div class="offset-md-3 col-md-6 col-sm-12">
+            <div class="login" id="contentArea">
+            <img src="../content/images/Runtime_Logo_Black.png" width="50" class="centerLogo">  
+              
+            <h1 >Register</h1>
+  
+              <!-- Message Area -->
+              <% if(messages.length > 0) { %>
+                <div id="messageArea" class="alert alert-danger">
+                  <%= messages %>
+                </div>
+                <% } %>
+  
+                <form method="POST" id="registerForm" novalidate>
+                  <p >Create your own account to host or particpate in tournaments</p>
+                  <input type="hidden" name="id" value="<%= user._id %>">    
+                  <div class="form-group">
+                    <div class="row">
+                      <p class="lead"><i class="fas fa-shield"></i> Select Profile Type</p>
+                      <div class="col-md-6">
+                        <input type="radio" name="profileType" id="ownerProfile" value="Owner" >
+                        <label for="ownerProfile">Tournament Owner</label>
+                      </div> 
+                      <div class="col-md-6">
+                        <input type="radio" name="profileType" id="playerProfile" value="Player">
+                        <label for="playerProfile">Player in Tournament</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <p class="lead"><i class="fas fa-user-shield"></i> Personal Information</p>
+                      <div class="col-md-6">
+                        <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name" value="<%= user.firstName %>" required>
+                      </div> 
+                      <div class="col-md-6">
+                        <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" value="<%= user.lastName %>" required>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input type="email" class="form-control" id="emailAddress" name="emailAddress" required
+                        value="" placeholder="Email">
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-group mt-4">
+                    <div class="row">
+                      <p class="lead"><i class="fas fa-database"></i> System Identification</p>
+                      <div class="col-md-12">
+                        <input type="text" class="form-control" id="username" name="username"  required
+                        value="" placeholder="Username">
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input type="password" class="form-control" id="password" name="password"  required
+                        value="" placeholder="Password">
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"  required
+                        value="" placeholder="Confirm Password">
+                      </div>
+                    </div>
+                  </div>
+                                                      
+                  <div class="text-end mt-2">
+                    <button id="submitButton" type="submit" class="btn btn-dark btn-lg">
+                      <i class="fas fa-user-plus"></i> Save</button>
+                    <button id="cancelButton" type="reset" class="btn btn-danger btn-lg">
+                      <i class="fas fa-undo"></i> Cancel</button>
+                  </div>
+                </form>
+              
+            </div>
+            <p class="text-center text-muted small">
+              Already have an account? 
+              <a class="link" href="/login">Sign in</a>
+            </p>
+      </div>
+    </div>
+  </div>
